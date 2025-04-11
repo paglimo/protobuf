@@ -111,6 +111,8 @@ message WorkRequest {
     }
     // Indicates whether the work request is a job builder task.
     bool job_builder = 7;
+    // When stub_local is set the local file with be a stub file
+    bool stub_local = 8;
 }
 
 message MockJob {
@@ -141,12 +143,6 @@ message SyncJob {
     // for example to restore a file in an RST to a different location in BeeGFS. This currently is
     // ignored for uploads.
     string remote_path = 3;
-    // If true, the local file is replaced with a "stub file" once the job finishes.
-    // - Download: The stub is created to reference the specified remote path without actually
-    //   pulling the file contents locally.
-    // - Upload: The file is uploaded first, then truncated into a stub that points the upload file
-    //   or object.
-    bool stub_only = 4;
     // By default the remote directory structure will be preserved on downloads unless flatten is
     // set. If the flag is set then the directory delimiter will be replaced with an underscore.
     bool flatten = 5 ;

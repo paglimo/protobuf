@@ -67,6 +67,8 @@ message JobRequest {
     bool force = 5;
     // Indicates whether the job is a job builder task.
     bool job_builder = 6;
+    // When stub_local is set the local file with be a stub file
+    bool stub_local = 7;
 }
 
 // Job contains all the data from the original request plus the job ID and
@@ -149,6 +151,9 @@ message Job {
         // If the job and its WRs completed successfully. This is a terminal state and no further 
         // state changes are possible once a job enters this state.
         COMPLETED = 9;
+        // If the job's WRs completed successfully and a stub has replaced the local file. This is a
+        // terminal state and no further state changes are possible once a job enters this state.
+        OFFLOADED = 10;
     }
     // Used as the upload ID for multipart uploads, or any other time 
     // an external identifer is needed to coordinate a distributed transfer.    

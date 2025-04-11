@@ -169,6 +169,7 @@ enum Job_State : int {
   Job_State_FAILED = 7,
   Job_State_CANCELLED = 8,
   Job_State_COMPLETED = 9,
+  Job_State_OFFLOADED = 10,
   Job_State_Job_State_INT_MIN_SENTINEL_DO_NOT_USE_ =
       std::numeric_limits<::int32_t>::min(),
   Job_State_Job_State_INT_MAX_SENTINEL_DO_NOT_USE_ =
@@ -178,8 +179,8 @@ enum Job_State : int {
 bool Job_State_IsValid(int value);
 extern const uint32_t Job_State_internal_data_[];
 constexpr Job_State Job_State_State_MIN = static_cast<Job_State>(0);
-constexpr Job_State Job_State_State_MAX = static_cast<Job_State>(9);
-constexpr int Job_State_State_ARRAYSIZE = 9 + 1;
+constexpr Job_State Job_State_State_MAX = static_cast<Job_State>(10);
+constexpr int Job_State_State_ARRAYSIZE = 10 + 1;
 const ::google::protobuf::EnumDescriptor*
 Job_State_descriptor();
 template <typename T>
@@ -192,7 +193,7 @@ const std::string& Job_State_Name(T value) {
 template <>
 inline const std::string& Job_State_Name(Job_State value) {
   return ::google::protobuf::internal::NameOfDenseEnum<Job_State_descriptor,
-                                                 0, 9>(
+                                                 0, 10>(
       static_cast<int>(value));
 }
 inline bool Job_State_Parse(absl::string_view name, Job_State* value) {
@@ -1219,6 +1220,7 @@ class JobRequest final : public ::google::protobuf::Message
     kRemoteStorageTargetFieldNumber = 4,
     kForceFieldNumber = 5,
     kJobBuilderFieldNumber = 6,
+    kStubLocalFieldNumber = 7,
     kSyncFieldNumber = 10,
     kMockFieldNumber = 11,
   };
@@ -1294,6 +1296,16 @@ class JobRequest final : public ::google::protobuf::Message
   void _internal_set_job_builder(bool value);
 
   public:
+  // bool stub_local = 7;
+  void clear_stub_local() ;
+  bool stub_local() const;
+  void set_stub_local(bool value);
+
+  private:
+  bool _internal_stub_local() const;
+  void _internal_set_stub_local(bool value);
+
+  public:
   // .flex.SyncJob sync = 10;
   bool has_sync() const;
   private:
@@ -1343,7 +1355,7 @@ class JobRequest final : public ::google::protobuf::Message
   inline void clear_has_type();
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<
-      3, 8, 2,
+      3, 9, 2,
       45, 2>
       _table_;
 
@@ -1367,6 +1379,7 @@ class JobRequest final : public ::google::protobuf::Message
     ::uint32_t remote_storage_target_;
     bool force_;
     bool job_builder_;
+    bool stub_local_;
     union TypeUnion {
       constexpr TypeUnion() : _constinit_{} {}
       ::google::protobuf::internal::ConstantInitialized _constinit_;
@@ -2892,6 +2905,7 @@ class Job final : public ::google::protobuf::Message
   static constexpr State FAILED = Job_State_FAILED;
   static constexpr State CANCELLED = Job_State_CANCELLED;
   static constexpr State COMPLETED = Job_State_COMPLETED;
+  static constexpr State OFFLOADED = Job_State_OFFLOADED;
   static inline bool State_IsValid(int value) {
     return Job_State_IsValid(value);
   }
@@ -4938,6 +4952,28 @@ inline bool JobRequest::_internal_job_builder() const {
 inline void JobRequest::_internal_set_job_builder(bool value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.job_builder_ = value;
+}
+
+// bool stub_local = 7;
+inline void JobRequest::clear_stub_local() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.stub_local_ = false;
+}
+inline bool JobRequest::stub_local() const {
+  // @@protoc_insertion_point(field_get:beeremote.JobRequest.stub_local)
+  return _internal_stub_local();
+}
+inline void JobRequest::set_stub_local(bool value) {
+  _internal_set_stub_local(value);
+  // @@protoc_insertion_point(field_set:beeremote.JobRequest.stub_local)
+}
+inline bool JobRequest::_internal_stub_local() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.stub_local_;
+}
+inline void JobRequest::_internal_set_stub_local(bool value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.stub_local_ = value;
 }
 
 inline bool JobRequest::has_type() const {

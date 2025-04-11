@@ -176,6 +176,9 @@ pub struct WorkRequest {
     /// Indicates whether the work request is a job builder task.
     #[prost(bool, tag = "7")]
     pub job_builder: bool,
+    /// When stub_local is set the local file with be a stub file
+    #[prost(bool, tag = "8")]
+    pub stub_local: bool,
     #[prost(oneof = "work_request::Type", tags = "10, 11")]
     pub r#type: ::core::option::Option<work_request::Type>,
 }
@@ -242,13 +245,6 @@ pub struct SyncJob {
     /// ignored for uploads.
     #[prost(string, tag = "3")]
     pub remote_path: ::prost::alloc::string::String,
-    /// If true, the local file is replaced with a "stub file" once the job finishes.
-    /// - Download: The stub is created to reference the specified remote path without actually
-    ///    pulling the file contents locally.
-    /// - Upload: The file is uploaded first, then truncated into a stub that points the upload file
-    ///    or object.
-    #[prost(bool, tag = "4")]
-    pub stub_only: bool,
     /// By default the remote directory structure will be preserved on downloads unless flatten is
     /// set. If the flag is set then the directory delimiter will be replaced with an underscore.
     #[prost(bool, tag = "5")]

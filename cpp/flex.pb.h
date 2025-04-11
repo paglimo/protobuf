@@ -1653,7 +1653,6 @@ class SyncJob final : public ::google::protobuf::Message
     kRemotePathFieldNumber = 3,
     kOperationFieldNumber = 1,
     kOverwriteFieldNumber = 2,
-    kStubOnlyFieldNumber = 4,
     kFlattenFieldNumber = 5,
   };
   // string remote_path = 3;
@@ -1692,16 +1691,6 @@ class SyncJob final : public ::google::protobuf::Message
   void _internal_set_overwrite(bool value);
 
   public:
-  // bool stub_only = 4;
-  void clear_stub_only() ;
-  bool stub_only() const;
-  void set_stub_only(bool value);
-
-  private:
-  bool _internal_stub_only() const;
-  void _internal_set_stub_only(bool value);
-
-  public:
   // bool flatten = 5;
   void clear_flatten() ;
   bool flatten() const;
@@ -1717,7 +1706,7 @@ class SyncJob final : public ::google::protobuf::Message
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<
-      3, 5, 0,
+      3, 4, 0,
       32, 2>
       _table_;
 
@@ -1738,7 +1727,6 @@ class SyncJob final : public ::google::protobuf::Message
     ::google::protobuf::internal::ArenaStringPtr remote_path_;
     int operation_;
     bool overwrite_;
-    bool stub_only_;
     bool flatten_;
     ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
@@ -3644,6 +3632,7 @@ class WorkRequest final : public ::google::protobuf::Message
     kSegmentFieldNumber = 5,
     kRemoteStorageTargetFieldNumber = 6,
     kJobBuilderFieldNumber = 7,
+    kStubLocalFieldNumber = 8,
     kMockFieldNumber = 10,
     kSyncFieldNumber = 11,
   };
@@ -3746,6 +3735,16 @@ class WorkRequest final : public ::google::protobuf::Message
   void _internal_set_job_builder(bool value);
 
   public:
+  // bool stub_local = 8;
+  void clear_stub_local() ;
+  bool stub_local() const;
+  void set_stub_local(bool value);
+
+  private:
+  bool _internal_stub_local() const;
+  void _internal_set_stub_local(bool value);
+
+  public:
   // .flex.MockJob mock = 10;
   bool has_mock() const;
   private:
@@ -3795,7 +3794,7 @@ class WorkRequest final : public ::google::protobuf::Message
   inline void clear_has_Type();
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<
-      3, 9, 3,
+      3, 10, 3,
       64, 2>
       _table_;
 
@@ -3822,6 +3821,7 @@ class WorkRequest final : public ::google::protobuf::Message
     ::flex::WorkRequest_Segment* segment_;
     ::uint32_t remote_storage_target_;
     bool job_builder_;
+    bool stub_local_;
     union TypeUnion {
       constexpr TypeUnion() : _constinit_{} {}
       ::google::protobuf::internal::ConstantInitialized _constinit_;
@@ -7294,6 +7294,28 @@ inline void WorkRequest::_internal_set_job_builder(bool value) {
   _impl_.job_builder_ = value;
 }
 
+// bool stub_local = 8;
+inline void WorkRequest::clear_stub_local() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.stub_local_ = false;
+}
+inline bool WorkRequest::stub_local() const {
+  // @@protoc_insertion_point(field_get:flex.WorkRequest.stub_local)
+  return _internal_stub_local();
+}
+inline void WorkRequest::set_stub_local(bool value) {
+  _internal_set_stub_local(value);
+  // @@protoc_insertion_point(field_set:flex.WorkRequest.stub_local)
+}
+inline bool WorkRequest::_internal_stub_local() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.stub_local_;
+}
+inline void WorkRequest::_internal_set_stub_local(bool value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.stub_local_ = value;
+}
+
 inline bool WorkRequest::has_Type() const {
   return Type_case() != TYPE_NOT_SET;
 }
@@ -7537,28 +7559,6 @@ inline void SyncJob::set_allocated_remote_path(std::string* value) {
     _impl_.remote_path_.Set("", GetArena());
   }
   // @@protoc_insertion_point(field_set_allocated:flex.SyncJob.remote_path)
-}
-
-// bool stub_only = 4;
-inline void SyncJob::clear_stub_only() {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.stub_only_ = false;
-}
-inline bool SyncJob::stub_only() const {
-  // @@protoc_insertion_point(field_get:flex.SyncJob.stub_only)
-  return _internal_stub_only();
-}
-inline void SyncJob::set_stub_only(bool value) {
-  _internal_set_stub_only(value);
-  // @@protoc_insertion_point(field_set:flex.SyncJob.stub_only)
-}
-inline bool SyncJob::_internal_stub_only() const {
-  ::google::protobuf::internal::TSanRead(&_impl_);
-  return _impl_.stub_only_;
-}
-inline void SyncJob::_internal_set_stub_only(bool value) {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.stub_only_ = value;
 }
 
 // bool flatten = 5;

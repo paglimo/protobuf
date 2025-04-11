@@ -91,6 +91,9 @@ pub struct JobRequest {
     /// Indicates whether the job is a job builder task.
     #[prost(bool, tag = "6")]
     pub job_builder: bool,
+    /// When stub_local is set the local file with be a stub file
+    #[prost(bool, tag = "7")]
+    pub stub_local: bool,
     #[prost(oneof = "job_request::Type", tags = "10, 11")]
     pub r#type: ::core::option::Option<job_request::Type>,
 }
@@ -230,6 +233,9 @@ pub mod job {
         /// If the job and its WRs completed successfully. This is a terminal state and no further
         /// state changes are possible once a job enters this state.
         Completed = 9,
+        /// If the job's WRs completed successfully and a stub has replaced the local file. This is a
+        /// terminal state and no further state changes are possible once a job enters this state.
+        Offloaded = 10,
     }
     impl State {
         /// String value of the enum field names used in the ProtoBuf definition.
@@ -247,6 +253,7 @@ pub mod job {
                 State::Failed => "FAILED",
                 State::Cancelled => "CANCELLED",
                 State::Completed => "COMPLETED",
+                State::Offloaded => "OFFLOADED",
             }
         }
         /// Creates an enum from field names used in the ProtoBuf definition.
@@ -261,6 +268,7 @@ pub mod job {
                 "FAILED" => Some(Self::Failed),
                 "CANCELLED" => Some(Self::Cancelled),
                 "COMPLETED" => Some(Self::Completed),
+                "OFFLOADED" => Some(Self::Offloaded),
                 _ => None,
             }
         }

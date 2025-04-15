@@ -145,8 +145,9 @@ message SyncJob {
     string remote_path = 3;
     // By default the remote directory structure will be preserved on downloads unless flatten is
     // set. If the flag is set then the directory delimiter will be replaced with an underscore.
-    bool flatten = 5 ;
+    bool flatten = 5;
 }
+
 
 // Currently while requests types are specific to a particular worker node type,
 // we use the same work type for all nodes. This is what allow us to return

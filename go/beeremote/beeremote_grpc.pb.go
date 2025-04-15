@@ -19,12 +19,13 @@ import (
 const _ = grpc.SupportPackageIsVersion9
 
 const (
-	BeeRemote_SubmitJob_FullMethodName    = "/beeremote.BeeRemote/SubmitJob"
-	BeeRemote_UpdatePaths_FullMethodName  = "/beeremote.BeeRemote/UpdatePaths"
-	BeeRemote_UpdateJobs_FullMethodName   = "/beeremote.BeeRemote/UpdateJobs"
-	BeeRemote_GetJobs_FullMethodName      = "/beeremote.BeeRemote/GetJobs"
-	BeeRemote_UpdateWork_FullMethodName   = "/beeremote.BeeRemote/UpdateWork"
-	BeeRemote_GetRSTConfig_FullMethodName = "/beeremote.BeeRemote/GetRSTConfig"
+	BeeRemote_SubmitJob_FullMethodName      = "/beeremote.BeeRemote/SubmitJob"
+	BeeRemote_UpdatePaths_FullMethodName    = "/beeremote.BeeRemote/UpdatePaths"
+	BeeRemote_UpdateJobs_FullMethodName     = "/beeremote.BeeRemote/UpdateJobs"
+	BeeRemote_GetJobs_FullMethodName        = "/beeremote.BeeRemote/GetJobs"
+	BeeRemote_UpdateWork_FullMethodName     = "/beeremote.BeeRemote/UpdateWork"
+	BeeRemote_GetRSTConfig_FullMethodName   = "/beeremote.BeeRemote/GetRSTConfig"
+	BeeRemote_GetGlobalFlags_FullMethodName = "/beeremote.BeeRemote/GetGlobalFlags"
 )
 
 // BeeRemoteClient is the client API for BeeRemote service.
@@ -49,6 +50,7 @@ type BeeRemoteClient interface {
 	// by worker nodes.
 	UpdateWork(ctx context.Context, in *UpdateWorkRequest, opts ...grpc.CallOption) (*UpdateWorkResponse, error)
 	GetRSTConfig(ctx context.Context, in *GetRSTConfigRequest, opts ...grpc.CallOption) (*GetRSTConfigResponse, error)
+	GetGlobalFlags(ctx context.Context, in *GetGlobalFlagsRequest, opts ...grpc.CallOption) (*GetGlobalFlagsResponse, error)
 }
 
 type beeRemoteClient struct {
@@ -137,6 +139,16 @@ func (c *beeRemoteClient) GetRSTConfig(ctx context.Context, in *GetRSTConfigRequ
 	return out, nil
 }
 
+func (c *beeRemoteClient) GetGlobalFlags(ctx context.Context, in *GetGlobalFlagsRequest, opts ...grpc.CallOption) (*GetGlobalFlagsResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(GetGlobalFlagsResponse)
+	err := c.cc.Invoke(ctx, BeeRemote_GetGlobalFlags_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // BeeRemoteServer is the server API for BeeRemote service.
 // All implementations must embed UnimplementedBeeRemoteServer
 // for forward compatibility.
@@ -159,6 +171,7 @@ type BeeRemoteServer interface {
 	// by worker nodes.
 	UpdateWork(context.Context, *UpdateWorkRequest) (*UpdateWorkResponse, error)
 	GetRSTConfig(context.Context, *GetRSTConfigRequest) (*GetRSTConfigResponse, error)
+	GetGlobalFlags(context.Context, *GetGlobalFlagsRequest) (*GetGlobalFlagsResponse, error)
 	mustEmbedUnimplementedBeeRemoteServer()
 }
 
@@ -186,6 +199,9 @@ func (UnimplementedBeeRemoteServer) UpdateWork(context.Context, *UpdateWorkReque
 }
 func (UnimplementedBeeRemoteServer) GetRSTConfig(context.Context, *GetRSTConfigRequest) (*GetRSTConfigResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetRSTConfig not implemented")
+}
+func (UnimplementedBeeRemoteServer) GetGlobalFlags(context.Context, *GetGlobalFlagsRequest) (*GetGlobalFlagsResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetGlobalFlags not implemented")
 }
 func (UnimplementedBeeRemoteServer) mustEmbedUnimplementedBeeRemoteServer() {}
 func (UnimplementedBeeRemoteServer) testEmbeddedByValue()                   {}
@@ -302,6 +318,24 @@ func _BeeRemote_GetRSTConfig_Handler(srv interface{}, ctx context.Context, dec f
 	return interceptor(ctx, in, info, handler)
 }
 
+func _BeeRemote_GetGlobalFlags_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetGlobalFlagsRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(BeeRemoteServer).GetGlobalFlags(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: BeeRemote_GetGlobalFlags_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(BeeRemoteServer).GetGlobalFlags(ctx, req.(*GetGlobalFlagsRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // BeeRemote_ServiceDesc is the grpc.ServiceDesc for BeeRemote service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -324,6 +358,10 @@ var BeeRemote_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "GetRSTConfig",
 			Handler:    _BeeRemote_GetRSTConfig_Handler,
+		},
+		{
+			MethodName: "GetGlobalFlags",
+			Handler:    _BeeRemote_GetGlobalFlags_Handler,
 		},
 	},
 	Streams: []grpc.StreamDesc{

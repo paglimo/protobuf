@@ -23,6 +23,7 @@ service BeeRemote {
     // by worker nodes.
     rpc UpdateWork(UpdateWorkRequest) returns (UpdateWorkResponse);
     rpc GetRSTConfig(GetRSTConfigRequest) returns (GetRSTConfigResponse);
+    rpc GetGlobalFlags(GetGlobalFlagsRequest) returns (GetGlobalFlagsResponse);
 }
 
 message SubmitJobRequest {
@@ -290,4 +291,21 @@ message GetRSTConfigRequest {
 
 message GetRSTConfigResponse {
     repeated flex.RemoteStorageTarget rsts = 1;
+}
+
+message GetGlobalFlagsRequest {
+}
+
+message GetGlobalFlagsResponse {
+    string remote_address = 1;
+    string mgmtd_address = 2;
+    string mount = 3;
+    string mgmtd_tls_cert_file = 4;
+    bool mgmtd_tls_disable_verification = 5;
+    bool mgmtd_tls_disable = 6;
+    string auth_file = 7;
+    bool auth_disable = 8;
+    int32 num_workers = 9;
+    int32 conn_timeout_ms = 10;
+    int32 log_level = 11;
 }

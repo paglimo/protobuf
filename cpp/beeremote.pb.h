@@ -59,6 +59,12 @@ struct TableStruct_beeremote_2eproto {
 extern const ::google::protobuf::internal::DescriptorTable
     descriptor_table_beeremote_2eproto;
 namespace beeremote {
+class GetGlobalFlagsRequest;
+struct GetGlobalFlagsRequestDefaultTypeInternal;
+extern GetGlobalFlagsRequestDefaultTypeInternal _GetGlobalFlagsRequest_default_instance_;
+class GetGlobalFlagsResponse;
+struct GetGlobalFlagsResponseDefaultTypeInternal;
+extern GetGlobalFlagsResponseDefaultTypeInternal _GetGlobalFlagsResponse_default_instance_;
 class GetJobsRequest;
 struct GetJobsRequestDefaultTypeInternal;
 extern GetJobsRequestDefaultTypeInternal _GetJobsRequest_default_instance_;
@@ -779,6 +785,491 @@ class GetJobsRequest_QueryIdAndPath final : public ::google::protobuf::Message
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
   union { Impl_ _impl_; };
+  friend struct ::TableStruct_beeremote_2eproto;
+};
+// -------------------------------------------------------------------
+
+class GetGlobalFlagsResponse final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:beeremote.GetGlobalFlagsResponse) */ {
+ public:
+  inline GetGlobalFlagsResponse() : GetGlobalFlagsResponse(nullptr) {}
+  ~GetGlobalFlagsResponse() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(GetGlobalFlagsResponse* msg, std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(GetGlobalFlagsResponse));
+  }
+#endif
+
+  template <typename = void>
+  explicit PROTOBUF_CONSTEXPR GetGlobalFlagsResponse(
+      ::google::protobuf::internal::ConstantInitialized);
+
+  inline GetGlobalFlagsResponse(const GetGlobalFlagsResponse& from) : GetGlobalFlagsResponse(nullptr, from) {}
+  inline GetGlobalFlagsResponse(GetGlobalFlagsResponse&& from) noexcept
+      : GetGlobalFlagsResponse(nullptr, std::move(from)) {}
+  inline GetGlobalFlagsResponse& operator=(const GetGlobalFlagsResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline GetGlobalFlagsResponse& operator=(GetGlobalFlagsResponse&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const GetGlobalFlagsResponse& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const GetGlobalFlagsResponse* internal_default_instance() {
+    return reinterpret_cast<const GetGlobalFlagsResponse*>(
+        &_GetGlobalFlagsResponse_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages = 20;
+  friend void swap(GetGlobalFlagsResponse& a, GetGlobalFlagsResponse& b) { a.Swap(&b); }
+  inline void Swap(GetGlobalFlagsResponse* other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(GetGlobalFlagsResponse* other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  GetGlobalFlagsResponse* New(::google::protobuf::Arena* arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<GetGlobalFlagsResponse>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const GetGlobalFlagsResponse& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const GetGlobalFlagsResponse& from) { GetGlobalFlagsResponse::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(
+      ::google::protobuf::MessageLite& to_msg,
+      const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  static ::uint8_t* _InternalSerialize(
+      const MessageLite& msg, ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream);
+
+  public:
+  ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  ::size_t ByteSizeLong() const final;
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(GetGlobalFlagsResponse* other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(
+      ::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "beeremote.GetGlobalFlagsResponse"; }
+
+ protected:
+  explicit GetGlobalFlagsResponse(::google::protobuf::Arena* arena);
+  GetGlobalFlagsResponse(::google::protobuf::Arena* arena, const GetGlobalFlagsResponse& from);
+  GetGlobalFlagsResponse(::google::protobuf::Arena* arena, GetGlobalFlagsResponse&& from) noexcept
+      : GetGlobalFlagsResponse(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* GetClassData() const PROTOBUF_FINAL;
+  static void* PlacementNew_(const void*, void* mem,
+                             ::google::protobuf::Arena* arena);
+  static constexpr auto InternalNewImpl_();
+  static const ::google::protobuf::internal::ClassDataFull _class_data_;
+
+ public:
+  ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kRemoteAddressFieldNumber = 1,
+    kMgmtdAddressFieldNumber = 2,
+    kMountFieldNumber = 3,
+    kMgmtdTlsCertFileFieldNumber = 4,
+    kAuthFileFieldNumber = 7,
+    kMgmtdTlsDisableVerificationFieldNumber = 5,
+    kMgmtdTlsDisableFieldNumber = 6,
+    kAuthDisableFieldNumber = 8,
+    kNumWorkersFieldNumber = 9,
+    kConnTimeoutMsFieldNumber = 10,
+    kLogLevelFieldNumber = 11,
+  };
+  // string remote_address = 1;
+  void clear_remote_address() ;
+  const std::string& remote_address() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_remote_address(Arg_&& arg, Args_... args);
+  std::string* mutable_remote_address();
+  PROTOBUF_NODISCARD std::string* release_remote_address();
+  void set_allocated_remote_address(std::string* value);
+
+  private:
+  const std::string& _internal_remote_address() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_remote_address(
+      const std::string& value);
+  std::string* _internal_mutable_remote_address();
+
+  public:
+  // string mgmtd_address = 2;
+  void clear_mgmtd_address() ;
+  const std::string& mgmtd_address() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_mgmtd_address(Arg_&& arg, Args_... args);
+  std::string* mutable_mgmtd_address();
+  PROTOBUF_NODISCARD std::string* release_mgmtd_address();
+  void set_allocated_mgmtd_address(std::string* value);
+
+  private:
+  const std::string& _internal_mgmtd_address() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mgmtd_address(
+      const std::string& value);
+  std::string* _internal_mutable_mgmtd_address();
+
+  public:
+  // string mount = 3;
+  void clear_mount() ;
+  const std::string& mount() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_mount(Arg_&& arg, Args_... args);
+  std::string* mutable_mount();
+  PROTOBUF_NODISCARD std::string* release_mount();
+  void set_allocated_mount(std::string* value);
+
+  private:
+  const std::string& _internal_mount() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mount(
+      const std::string& value);
+  std::string* _internal_mutable_mount();
+
+  public:
+  // string mgmtd_tls_cert_file = 4;
+  void clear_mgmtd_tls_cert_file() ;
+  const std::string& mgmtd_tls_cert_file() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_mgmtd_tls_cert_file(Arg_&& arg, Args_... args);
+  std::string* mutable_mgmtd_tls_cert_file();
+  PROTOBUF_NODISCARD std::string* release_mgmtd_tls_cert_file();
+  void set_allocated_mgmtd_tls_cert_file(std::string* value);
+
+  private:
+  const std::string& _internal_mgmtd_tls_cert_file() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mgmtd_tls_cert_file(
+      const std::string& value);
+  std::string* _internal_mutable_mgmtd_tls_cert_file();
+
+  public:
+  // string auth_file = 7;
+  void clear_auth_file() ;
+  const std::string& auth_file() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_auth_file(Arg_&& arg, Args_... args);
+  std::string* mutable_auth_file();
+  PROTOBUF_NODISCARD std::string* release_auth_file();
+  void set_allocated_auth_file(std::string* value);
+
+  private:
+  const std::string& _internal_auth_file() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_auth_file(
+      const std::string& value);
+  std::string* _internal_mutable_auth_file();
+
+  public:
+  // bool mgmtd_tls_disable_verification = 5;
+  void clear_mgmtd_tls_disable_verification() ;
+  bool mgmtd_tls_disable_verification() const;
+  void set_mgmtd_tls_disable_verification(bool value);
+
+  private:
+  bool _internal_mgmtd_tls_disable_verification() const;
+  void _internal_set_mgmtd_tls_disable_verification(bool value);
+
+  public:
+  // bool mgmtd_tls_disable = 6;
+  void clear_mgmtd_tls_disable() ;
+  bool mgmtd_tls_disable() const;
+  void set_mgmtd_tls_disable(bool value);
+
+  private:
+  bool _internal_mgmtd_tls_disable() const;
+  void _internal_set_mgmtd_tls_disable(bool value);
+
+  public:
+  // bool auth_disable = 8;
+  void clear_auth_disable() ;
+  bool auth_disable() const;
+  void set_auth_disable(bool value);
+
+  private:
+  bool _internal_auth_disable() const;
+  void _internal_set_auth_disable(bool value);
+
+  public:
+  // int32 num_workers = 9;
+  void clear_num_workers() ;
+  ::int32_t num_workers() const;
+  void set_num_workers(::int32_t value);
+
+  private:
+  ::int32_t _internal_num_workers() const;
+  void _internal_set_num_workers(::int32_t value);
+
+  public:
+  // int32 conn_timeout_ms = 10;
+  void clear_conn_timeout_ms() ;
+  ::int32_t conn_timeout_ms() const;
+  void set_conn_timeout_ms(::int32_t value);
+
+  private:
+  ::int32_t _internal_conn_timeout_ms() const;
+  void _internal_set_conn_timeout_ms(::int32_t value);
+
+  public:
+  // int32 log_level = 11;
+  void clear_log_level() ;
+  ::int32_t log_level() const;
+  void set_log_level(::int32_t value);
+
+  private:
+  ::int32_t _internal_log_level() const;
+  void _internal_set_log_level(::int32_t value);
+
+  public:
+  // @@protoc_insertion_point(class_scope:beeremote.GetGlobalFlagsResponse)
+ private:
+  class _Internal;
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<
+      4, 11, 0,
+      109, 2>
+      _table_;
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(
+        ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena);
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena, const Impl_& from,
+                          const GetGlobalFlagsResponse& from_msg);
+    ::google::protobuf::internal::ArenaStringPtr remote_address_;
+    ::google::protobuf::internal::ArenaStringPtr mgmtd_address_;
+    ::google::protobuf::internal::ArenaStringPtr mount_;
+    ::google::protobuf::internal::ArenaStringPtr mgmtd_tls_cert_file_;
+    ::google::protobuf::internal::ArenaStringPtr auth_file_;
+    bool mgmtd_tls_disable_verification_;
+    bool mgmtd_tls_disable_;
+    bool auth_disable_;
+    ::int32_t num_workers_;
+    ::int32_t conn_timeout_ms_;
+    ::int32_t log_level_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_beeremote_2eproto;
+};
+// -------------------------------------------------------------------
+
+class GetGlobalFlagsRequest final : public ::google::protobuf::internal::ZeroFieldsBase
+/* @@protoc_insertion_point(class_definition:beeremote.GetGlobalFlagsRequest) */ {
+ public:
+  inline GetGlobalFlagsRequest() : GetGlobalFlagsRequest(nullptr) {}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(GetGlobalFlagsRequest* msg, std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(GetGlobalFlagsRequest));
+  }
+#endif
+
+  template <typename = void>
+  explicit PROTOBUF_CONSTEXPR GetGlobalFlagsRequest(
+      ::google::protobuf::internal::ConstantInitialized);
+
+  inline GetGlobalFlagsRequest(const GetGlobalFlagsRequest& from) : GetGlobalFlagsRequest(nullptr, from) {}
+  inline GetGlobalFlagsRequest(GetGlobalFlagsRequest&& from) noexcept
+      : GetGlobalFlagsRequest(nullptr, std::move(from)) {}
+  inline GetGlobalFlagsRequest& operator=(const GetGlobalFlagsRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline GetGlobalFlagsRequest& operator=(GetGlobalFlagsRequest&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const GetGlobalFlagsRequest& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const GetGlobalFlagsRequest* internal_default_instance() {
+    return reinterpret_cast<const GetGlobalFlagsRequest*>(
+        &_GetGlobalFlagsRequest_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages = 19;
+  friend void swap(GetGlobalFlagsRequest& a, GetGlobalFlagsRequest& b) { a.Swap(&b); }
+  inline void Swap(GetGlobalFlagsRequest* other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(GetGlobalFlagsRequest* other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  GetGlobalFlagsRequest* New(::google::protobuf::Arena* arena = nullptr) const {
+    return ::google::protobuf::internal::ZeroFieldsBase::DefaultConstruct<GetGlobalFlagsRequest>(arena);
+  }
+  using ::google::protobuf::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const GetGlobalFlagsRequest& from) {
+    ::google::protobuf::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::google::protobuf::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const GetGlobalFlagsRequest& from) {
+    ::google::protobuf::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+
+  public:
+  bool IsInitialized() const {
+    return true;
+  }
+ private:
+  template <typename T>
+  friend ::absl::string_view(
+      ::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "beeremote.GetGlobalFlagsRequest"; }
+
+ protected:
+  explicit GetGlobalFlagsRequest(::google::protobuf::Arena* arena);
+  GetGlobalFlagsRequest(::google::protobuf::Arena* arena, const GetGlobalFlagsRequest& from);
+  GetGlobalFlagsRequest(::google::protobuf::Arena* arena, GetGlobalFlagsRequest&& from) noexcept
+      : GetGlobalFlagsRequest(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* GetClassData() const PROTOBUF_FINAL;
+  static void* PlacementNew_(const void*, void* mem,
+                             ::google::protobuf::Arena* arena);
+  static constexpr auto InternalNewImpl_();
+  static const ::google::protobuf::internal::ClassDataFull _class_data_;
+
+ public:
+  ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  // @@protoc_insertion_point(class_scope:beeremote.GetGlobalFlagsRequest)
+ private:
+  class _Internal;
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<
+      0, 0, 0,
+      0, 2>
+      _table_;
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(
+        ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena);
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena, const Impl_& from,
+                          const GetGlobalFlagsRequest& from_msg);
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
   friend struct ::TableStruct_beeremote_2eproto;
 };
 // -------------------------------------------------------------------
@@ -7393,6 +7884,386 @@ inline ::google::protobuf::RepeatedPtrField<::flex::RemoteStorageTarget>*
 GetRSTConfigResponse::_internal_mutable_rsts() {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return &_impl_.rsts_;
+}
+
+// -------------------------------------------------------------------
+
+// GetGlobalFlagsRequest
+
+// -------------------------------------------------------------------
+
+// GetGlobalFlagsResponse
+
+// string remote_address = 1;
+inline void GetGlobalFlagsResponse::clear_remote_address() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.remote_address_.ClearToEmpty();
+}
+inline const std::string& GetGlobalFlagsResponse::remote_address() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:beeremote.GetGlobalFlagsResponse.remote_address)
+  return _internal_remote_address();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void GetGlobalFlagsResponse::set_remote_address(Arg_&& arg,
+                                                     Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.remote_address_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:beeremote.GetGlobalFlagsResponse.remote_address)
+}
+inline std::string* GetGlobalFlagsResponse::mutable_remote_address() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_remote_address();
+  // @@protoc_insertion_point(field_mutable:beeremote.GetGlobalFlagsResponse.remote_address)
+  return _s;
+}
+inline const std::string& GetGlobalFlagsResponse::_internal_remote_address() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.remote_address_.Get();
+}
+inline void GetGlobalFlagsResponse::_internal_set_remote_address(const std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.remote_address_.Set(value, GetArena());
+}
+inline std::string* GetGlobalFlagsResponse::_internal_mutable_remote_address() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.remote_address_.Mutable( GetArena());
+}
+inline std::string* GetGlobalFlagsResponse::release_remote_address() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:beeremote.GetGlobalFlagsResponse.remote_address)
+  return _impl_.remote_address_.Release();
+}
+inline void GetGlobalFlagsResponse::set_allocated_remote_address(std::string* value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.remote_address_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.remote_address_.IsDefault()) {
+    _impl_.remote_address_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:beeremote.GetGlobalFlagsResponse.remote_address)
+}
+
+// string mgmtd_address = 2;
+inline void GetGlobalFlagsResponse::clear_mgmtd_address() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.mgmtd_address_.ClearToEmpty();
+}
+inline const std::string& GetGlobalFlagsResponse::mgmtd_address() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:beeremote.GetGlobalFlagsResponse.mgmtd_address)
+  return _internal_mgmtd_address();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void GetGlobalFlagsResponse::set_mgmtd_address(Arg_&& arg,
+                                                     Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.mgmtd_address_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:beeremote.GetGlobalFlagsResponse.mgmtd_address)
+}
+inline std::string* GetGlobalFlagsResponse::mutable_mgmtd_address() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_mgmtd_address();
+  // @@protoc_insertion_point(field_mutable:beeremote.GetGlobalFlagsResponse.mgmtd_address)
+  return _s;
+}
+inline const std::string& GetGlobalFlagsResponse::_internal_mgmtd_address() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.mgmtd_address_.Get();
+}
+inline void GetGlobalFlagsResponse::_internal_set_mgmtd_address(const std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.mgmtd_address_.Set(value, GetArena());
+}
+inline std::string* GetGlobalFlagsResponse::_internal_mutable_mgmtd_address() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.mgmtd_address_.Mutable( GetArena());
+}
+inline std::string* GetGlobalFlagsResponse::release_mgmtd_address() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:beeremote.GetGlobalFlagsResponse.mgmtd_address)
+  return _impl_.mgmtd_address_.Release();
+}
+inline void GetGlobalFlagsResponse::set_allocated_mgmtd_address(std::string* value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.mgmtd_address_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.mgmtd_address_.IsDefault()) {
+    _impl_.mgmtd_address_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:beeremote.GetGlobalFlagsResponse.mgmtd_address)
+}
+
+// string mount = 3;
+inline void GetGlobalFlagsResponse::clear_mount() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.mount_.ClearToEmpty();
+}
+inline const std::string& GetGlobalFlagsResponse::mount() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:beeremote.GetGlobalFlagsResponse.mount)
+  return _internal_mount();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void GetGlobalFlagsResponse::set_mount(Arg_&& arg,
+                                                     Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.mount_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:beeremote.GetGlobalFlagsResponse.mount)
+}
+inline std::string* GetGlobalFlagsResponse::mutable_mount() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_mount();
+  // @@protoc_insertion_point(field_mutable:beeremote.GetGlobalFlagsResponse.mount)
+  return _s;
+}
+inline const std::string& GetGlobalFlagsResponse::_internal_mount() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.mount_.Get();
+}
+inline void GetGlobalFlagsResponse::_internal_set_mount(const std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.mount_.Set(value, GetArena());
+}
+inline std::string* GetGlobalFlagsResponse::_internal_mutable_mount() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.mount_.Mutable( GetArena());
+}
+inline std::string* GetGlobalFlagsResponse::release_mount() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:beeremote.GetGlobalFlagsResponse.mount)
+  return _impl_.mount_.Release();
+}
+inline void GetGlobalFlagsResponse::set_allocated_mount(std::string* value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.mount_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.mount_.IsDefault()) {
+    _impl_.mount_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:beeremote.GetGlobalFlagsResponse.mount)
+}
+
+// string mgmtd_tls_cert_file = 4;
+inline void GetGlobalFlagsResponse::clear_mgmtd_tls_cert_file() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.mgmtd_tls_cert_file_.ClearToEmpty();
+}
+inline const std::string& GetGlobalFlagsResponse::mgmtd_tls_cert_file() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:beeremote.GetGlobalFlagsResponse.mgmtd_tls_cert_file)
+  return _internal_mgmtd_tls_cert_file();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void GetGlobalFlagsResponse::set_mgmtd_tls_cert_file(Arg_&& arg,
+                                                     Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.mgmtd_tls_cert_file_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:beeremote.GetGlobalFlagsResponse.mgmtd_tls_cert_file)
+}
+inline std::string* GetGlobalFlagsResponse::mutable_mgmtd_tls_cert_file() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_mgmtd_tls_cert_file();
+  // @@protoc_insertion_point(field_mutable:beeremote.GetGlobalFlagsResponse.mgmtd_tls_cert_file)
+  return _s;
+}
+inline const std::string& GetGlobalFlagsResponse::_internal_mgmtd_tls_cert_file() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.mgmtd_tls_cert_file_.Get();
+}
+inline void GetGlobalFlagsResponse::_internal_set_mgmtd_tls_cert_file(const std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.mgmtd_tls_cert_file_.Set(value, GetArena());
+}
+inline std::string* GetGlobalFlagsResponse::_internal_mutable_mgmtd_tls_cert_file() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.mgmtd_tls_cert_file_.Mutable( GetArena());
+}
+inline std::string* GetGlobalFlagsResponse::release_mgmtd_tls_cert_file() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:beeremote.GetGlobalFlagsResponse.mgmtd_tls_cert_file)
+  return _impl_.mgmtd_tls_cert_file_.Release();
+}
+inline void GetGlobalFlagsResponse::set_allocated_mgmtd_tls_cert_file(std::string* value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.mgmtd_tls_cert_file_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.mgmtd_tls_cert_file_.IsDefault()) {
+    _impl_.mgmtd_tls_cert_file_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:beeremote.GetGlobalFlagsResponse.mgmtd_tls_cert_file)
+}
+
+// bool mgmtd_tls_disable_verification = 5;
+inline void GetGlobalFlagsResponse::clear_mgmtd_tls_disable_verification() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.mgmtd_tls_disable_verification_ = false;
+}
+inline bool GetGlobalFlagsResponse::mgmtd_tls_disable_verification() const {
+  // @@protoc_insertion_point(field_get:beeremote.GetGlobalFlagsResponse.mgmtd_tls_disable_verification)
+  return _internal_mgmtd_tls_disable_verification();
+}
+inline void GetGlobalFlagsResponse::set_mgmtd_tls_disable_verification(bool value) {
+  _internal_set_mgmtd_tls_disable_verification(value);
+  // @@protoc_insertion_point(field_set:beeremote.GetGlobalFlagsResponse.mgmtd_tls_disable_verification)
+}
+inline bool GetGlobalFlagsResponse::_internal_mgmtd_tls_disable_verification() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.mgmtd_tls_disable_verification_;
+}
+inline void GetGlobalFlagsResponse::_internal_set_mgmtd_tls_disable_verification(bool value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.mgmtd_tls_disable_verification_ = value;
+}
+
+// bool mgmtd_tls_disable = 6;
+inline void GetGlobalFlagsResponse::clear_mgmtd_tls_disable() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.mgmtd_tls_disable_ = false;
+}
+inline bool GetGlobalFlagsResponse::mgmtd_tls_disable() const {
+  // @@protoc_insertion_point(field_get:beeremote.GetGlobalFlagsResponse.mgmtd_tls_disable)
+  return _internal_mgmtd_tls_disable();
+}
+inline void GetGlobalFlagsResponse::set_mgmtd_tls_disable(bool value) {
+  _internal_set_mgmtd_tls_disable(value);
+  // @@protoc_insertion_point(field_set:beeremote.GetGlobalFlagsResponse.mgmtd_tls_disable)
+}
+inline bool GetGlobalFlagsResponse::_internal_mgmtd_tls_disable() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.mgmtd_tls_disable_;
+}
+inline void GetGlobalFlagsResponse::_internal_set_mgmtd_tls_disable(bool value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.mgmtd_tls_disable_ = value;
+}
+
+// string auth_file = 7;
+inline void GetGlobalFlagsResponse::clear_auth_file() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.auth_file_.ClearToEmpty();
+}
+inline const std::string& GetGlobalFlagsResponse::auth_file() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:beeremote.GetGlobalFlagsResponse.auth_file)
+  return _internal_auth_file();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void GetGlobalFlagsResponse::set_auth_file(Arg_&& arg,
+                                                     Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.auth_file_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:beeremote.GetGlobalFlagsResponse.auth_file)
+}
+inline std::string* GetGlobalFlagsResponse::mutable_auth_file() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_auth_file();
+  // @@protoc_insertion_point(field_mutable:beeremote.GetGlobalFlagsResponse.auth_file)
+  return _s;
+}
+inline const std::string& GetGlobalFlagsResponse::_internal_auth_file() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.auth_file_.Get();
+}
+inline void GetGlobalFlagsResponse::_internal_set_auth_file(const std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.auth_file_.Set(value, GetArena());
+}
+inline std::string* GetGlobalFlagsResponse::_internal_mutable_auth_file() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.auth_file_.Mutable( GetArena());
+}
+inline std::string* GetGlobalFlagsResponse::release_auth_file() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:beeremote.GetGlobalFlagsResponse.auth_file)
+  return _impl_.auth_file_.Release();
+}
+inline void GetGlobalFlagsResponse::set_allocated_auth_file(std::string* value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.auth_file_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.auth_file_.IsDefault()) {
+    _impl_.auth_file_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:beeremote.GetGlobalFlagsResponse.auth_file)
+}
+
+// bool auth_disable = 8;
+inline void GetGlobalFlagsResponse::clear_auth_disable() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.auth_disable_ = false;
+}
+inline bool GetGlobalFlagsResponse::auth_disable() const {
+  // @@protoc_insertion_point(field_get:beeremote.GetGlobalFlagsResponse.auth_disable)
+  return _internal_auth_disable();
+}
+inline void GetGlobalFlagsResponse::set_auth_disable(bool value) {
+  _internal_set_auth_disable(value);
+  // @@protoc_insertion_point(field_set:beeremote.GetGlobalFlagsResponse.auth_disable)
+}
+inline bool GetGlobalFlagsResponse::_internal_auth_disable() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.auth_disable_;
+}
+inline void GetGlobalFlagsResponse::_internal_set_auth_disable(bool value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.auth_disable_ = value;
+}
+
+// int32 num_workers = 9;
+inline void GetGlobalFlagsResponse::clear_num_workers() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.num_workers_ = 0;
+}
+inline ::int32_t GetGlobalFlagsResponse::num_workers() const {
+  // @@protoc_insertion_point(field_get:beeremote.GetGlobalFlagsResponse.num_workers)
+  return _internal_num_workers();
+}
+inline void GetGlobalFlagsResponse::set_num_workers(::int32_t value) {
+  _internal_set_num_workers(value);
+  // @@protoc_insertion_point(field_set:beeremote.GetGlobalFlagsResponse.num_workers)
+}
+inline ::int32_t GetGlobalFlagsResponse::_internal_num_workers() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.num_workers_;
+}
+inline void GetGlobalFlagsResponse::_internal_set_num_workers(::int32_t value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.num_workers_ = value;
+}
+
+// int32 conn_timeout_ms = 10;
+inline void GetGlobalFlagsResponse::clear_conn_timeout_ms() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.conn_timeout_ms_ = 0;
+}
+inline ::int32_t GetGlobalFlagsResponse::conn_timeout_ms() const {
+  // @@protoc_insertion_point(field_get:beeremote.GetGlobalFlagsResponse.conn_timeout_ms)
+  return _internal_conn_timeout_ms();
+}
+inline void GetGlobalFlagsResponse::set_conn_timeout_ms(::int32_t value) {
+  _internal_set_conn_timeout_ms(value);
+  // @@protoc_insertion_point(field_set:beeremote.GetGlobalFlagsResponse.conn_timeout_ms)
+}
+inline ::int32_t GetGlobalFlagsResponse::_internal_conn_timeout_ms() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.conn_timeout_ms_;
+}
+inline void GetGlobalFlagsResponse::_internal_set_conn_timeout_ms(::int32_t value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.conn_timeout_ms_ = value;
+}
+
+// int32 log_level = 11;
+inline void GetGlobalFlagsResponse::clear_log_level() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.log_level_ = 0;
+}
+inline ::int32_t GetGlobalFlagsResponse::log_level() const {
+  // @@protoc_insertion_point(field_get:beeremote.GetGlobalFlagsResponse.log_level)
+  return _internal_log_level();
+}
+inline void GetGlobalFlagsResponse::set_log_level(::int32_t value) {
+  _internal_set_log_level(value);
+  // @@protoc_insertion_point(field_set:beeremote.GetGlobalFlagsResponse.log_level)
+}
+inline ::int32_t GetGlobalFlagsResponse::_internal_log_level() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.log_level_;
+}
+inline void GetGlobalFlagsResponse::_internal_set_log_level(::int32_t value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.log_level_ = value;
 }
 
 #ifdef __GNUC__

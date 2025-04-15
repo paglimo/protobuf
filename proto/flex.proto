@@ -146,6 +146,28 @@ message SyncJob {
     // By default the remote directory structure will be preserved on downloads unless flatten is
     // set. If the flag is set then the directory delimiter will be replaced with an underscore.
     bool flatten = 5;
+    // SyncJobLockedInfo is require information that can be generated ahead of time and then passed
+    // with SyncJob. The file should either have already obtained a read-only lock for uploads or a
+    // read-write lock for downloads.
+    SyncJobLockedInfo lockedInfo = 6;
+    message SyncJobLockedInfo {
+        // locked indicates the file read-only or read-write lock has already been obtained.
+        bool locked = 1;
+        bool exists = 2;
+        // Size of the local file.
+        int64 size = 3;
+        // File mode of the local file
+        uint32 mode = 4;
+        // Last modified time of the local file.
+        google.protobuf.Timestamp mtime = 5;
+        // Size of the remote file or object.
+        int64 remote_size = 6;
+        // Last beegfs_mtime of the remote file or object.
+        google.protobuf.Timestamp remote_mtime = 7;
+        // If stub_url is not empty then path is for a stub file with the provided rst url.
+        uint32 stub_url_rst_id = 8;
+        string stub_url_path = 9;
+    }
 }
 
 

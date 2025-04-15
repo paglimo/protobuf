@@ -249,9 +249,43 @@ pub struct SyncJob {
     /// set. If the flag is set then the directory delimiter will be replaced with an underscore.
     #[prost(bool, tag = "5")]
     pub flatten: bool,
+    /// SyncJobLockedInfo is require information that can be generated ahead of time and then passed
+    /// with SyncJob. The file should either have already obtained a read-only lock for uploads or a
+    /// read-write lock for downloads.
+    #[prost(message, optional, tag = "6")]
+    pub locked_info: ::core::option::Option<sync_job::SyncJobLockedInfo>,
 }
 /// Nested message and enum types in `SyncJob`.
 pub mod sync_job {
+    #[allow(clippy::derive_partial_eq_without_eq)]
+    #[derive(Clone, PartialEq, ::prost::Message)]
+    pub struct SyncJobLockedInfo {
+        /// locked indicates the file read-only or read-write lock has already been obtained.
+        #[prost(bool, tag = "1")]
+        pub locked: bool,
+        #[prost(bool, tag = "2")]
+        pub exists: bool,
+        /// Size of the local file.
+        #[prost(int64, tag = "3")]
+        pub size: i64,
+        /// File mode of the local file
+        #[prost(uint32, tag = "4")]
+        pub mode: u32,
+        /// Last modified time of the local file.
+        #[prost(message, optional, tag = "5")]
+        pub mtime: ::core::option::Option<::prost_types::Timestamp>,
+        /// Size of the remote file or object.
+        #[prost(int64, tag = "6")]
+        pub remote_size: i64,
+        /// Last beegfs_mtime of the remote file or object.
+        #[prost(message, optional, tag = "7")]
+        pub remote_mtime: ::core::option::Option<::prost_types::Timestamp>,
+        /// If stub_url is not empty then path is for a stub file with the provided rst url.
+        #[prost(uint32, tag = "8")]
+        pub stub_url_rst_id: u32,
+        #[prost(string, tag = "9")]
+        pub stub_url_path: ::prost::alloc::string::String,
+    }
     #[derive(
         Clone,
         Copy,

@@ -206,43 +206,6 @@ struct UpdateJobsRequestDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 UpdateJobsRequestDefaultTypeInternal _UpdateJobsRequest_default_instance_;
 
-inline constexpr JobRequest::Impl_::Impl_(
-    ::_pbi::ConstantInitialized) noexcept
-      : path_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()),
-        name_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()),
-        priority_{0},
-        remote_storage_target_{0u},
-        force_{false},
-        job_builder_{false},
-        stub_local_{false},
-        type_{},
-        _cached_size_{0},
-        _oneof_case_{} {}
-
-template <typename>
-PROTOBUF_CONSTEXPR JobRequest::JobRequest(::_pbi::ConstantInitialized)
-#if defined(PROTOBUF_CUSTOM_VTABLE)
-    : ::google::protobuf::Message(_class_data_.base()),
-#else   // PROTOBUF_CUSTOM_VTABLE
-    : ::google::protobuf::Message(),
-#endif  // PROTOBUF_CUSTOM_VTABLE
-      _impl_(::_pbi::ConstantInitialized()) {
-}
-struct JobRequestDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR JobRequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~JobRequestDefaultTypeInternal() {}
-  union {
-    JobRequest _instance;
-  };
-};
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 JobRequestDefaultTypeInternal _JobRequest_default_instance_;
-
 inline constexpr Job_Status::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
       : _cached_size_{0},
@@ -354,31 +317,6 @@ struct UpdatePathsRequestDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 UpdatePathsRequestDefaultTypeInternal _UpdatePathsRequest_default_instance_;
 
-inline constexpr SubmitJobRequest::Impl_::Impl_(
-    ::_pbi::ConstantInitialized) noexcept
-      : _cached_size_{0},
-        request_{nullptr} {}
-
-template <typename>
-PROTOBUF_CONSTEXPR SubmitJobRequest::SubmitJobRequest(::_pbi::ConstantInitialized)
-#if defined(PROTOBUF_CUSTOM_VTABLE)
-    : ::google::protobuf::Message(_class_data_.base()),
-#else   // PROTOBUF_CUSTOM_VTABLE
-    : ::google::protobuf::Message(),
-#endif  // PROTOBUF_CUSTOM_VTABLE
-      _impl_(::_pbi::ConstantInitialized()) {
-}
-struct SubmitJobRequestDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR SubmitJobRequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~SubmitJobRequestDefaultTypeInternal() {}
-  union {
-    SubmitJobRequest _instance;
-  };
-};
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SubmitJobRequestDefaultTypeInternal _SubmitJobRequest_default_instance_;
-
 inline constexpr JobResult_WorkResult::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
       : _cached_size_{0},
@@ -409,6 +347,93 @@ struct JobResult_WorkResultDefaultTypeInternal {
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 JobResult_WorkResultDefaultTypeInternal _JobResult_WorkResult_default_instance_;
+
+inline constexpr JobRequest::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : path_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        name_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        priority_{0},
+        remote_storage_target_{0u},
+        force_{false},
+        job_builder_{false},
+        stub_local_{false},
+        type_{},
+        _cached_size_{0},
+        _oneof_case_{} {}
+
+template <typename>
+PROTOBUF_CONSTEXPR JobRequest::JobRequest(::_pbi::ConstantInitialized)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(_class_data_.base()),
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(),
+#endif  // PROTOBUF_CUSTOM_VTABLE
+      _impl_(::_pbi::ConstantInitialized()) {
+}
+struct JobRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR JobRequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~JobRequestDefaultTypeInternal() {}
+  union {
+    JobRequest _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 JobRequestDefaultTypeInternal _JobRequest_default_instance_;
+
+inline constexpr GetRSTConfigResponse::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : rsts_{},
+        _cached_size_{0} {}
+
+template <typename>
+PROTOBUF_CONSTEXPR GetRSTConfigResponse::GetRSTConfigResponse(::_pbi::ConstantInitialized)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(_class_data_.base()),
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(),
+#endif  // PROTOBUF_CUSTOM_VTABLE
+      _impl_(::_pbi::ConstantInitialized()) {
+}
+struct GetRSTConfigResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GetRSTConfigResponseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~GetRSTConfigResponseDefaultTypeInternal() {}
+  union {
+    GetRSTConfigResponse _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetRSTConfigResponseDefaultTypeInternal _GetRSTConfigResponse_default_instance_;
+
+inline constexpr SubmitJobRequest::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : _cached_size_{0},
+        request_{nullptr} {}
+
+template <typename>
+PROTOBUF_CONSTEXPR SubmitJobRequest::SubmitJobRequest(::_pbi::ConstantInitialized)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(_class_data_.base()),
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(),
+#endif  // PROTOBUF_CUSTOM_VTABLE
+      _impl_(::_pbi::ConstantInitialized()) {
+}
+struct SubmitJobRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR SubmitJobRequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~SubmitJobRequestDefaultTypeInternal() {}
+  union {
+    SubmitJobRequest _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SubmitJobRequestDefaultTypeInternal _SubmitJobRequest_default_instance_;
 
 inline constexpr Job::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
@@ -471,31 +496,6 @@ struct JobResultDefaultTypeInternal {
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 JobResultDefaultTypeInternal _JobResult_default_instance_;
-
-inline constexpr GetRSTConfigResponse::Impl_::Impl_(
-    ::_pbi::ConstantInitialized) noexcept
-      : rsts_{},
-        _cached_size_{0} {}
-
-template <typename>
-PROTOBUF_CONSTEXPR GetRSTConfigResponse::GetRSTConfigResponse(::_pbi::ConstantInitialized)
-#if defined(PROTOBUF_CUSTOM_VTABLE)
-    : ::google::protobuf::Message(_class_data_.base()),
-#else   // PROTOBUF_CUSTOM_VTABLE
-    : ::google::protobuf::Message(),
-#endif  // PROTOBUF_CUSTOM_VTABLE
-      _impl_(::_pbi::ConstantInitialized()) {
-}
-struct GetRSTConfigResponseDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR GetRSTConfigResponseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~GetRSTConfigResponseDefaultTypeInternal() {}
-  union {
-    GetRSTConfigResponse _instance;
-  };
-};
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetRSTConfigResponseDefaultTypeInternal _GetRSTConfigResponse_default_instance_;
 
 inline constexpr UpdateJobsResponse::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept

@@ -175,36 +175,6 @@ struct UpdateConfigResponseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 UpdateConfigResponseDefaultTypeInternal _UpdateConfigResponse_default_instance_;
 
-inline constexpr SyncJob::Impl_::Impl_(
-    ::_pbi::ConstantInitialized) noexcept
-      : remote_path_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()),
-        operation_{static_cast< ::flex::SyncJob_Operation >(0)},
-        overwrite_{false},
-        flatten_{false},
-        _cached_size_{0} {}
-
-template <typename>
-PROTOBUF_CONSTEXPR SyncJob::SyncJob(::_pbi::ConstantInitialized)
-#if defined(PROTOBUF_CUSTOM_VTABLE)
-    : ::google::protobuf::Message(_class_data_.base()),
-#else   // PROTOBUF_CUSTOM_VTABLE
-    : ::google::protobuf::Message(),
-#endif  // PROTOBUF_CUSTOM_VTABLE
-      _impl_(::_pbi::ConstantInitialized()) {
-}
-struct SyncJobDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR SyncJobDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~SyncJobDefaultTypeInternal() {}
-  union {
-    SyncJob _instance;
-  };
-};
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SyncJobDefaultTypeInternal _SyncJob_default_instance_;
-
 inline constexpr RemoteStorageTarget_S3::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
       : endpoint_url_(
@@ -438,48 +408,6 @@ struct BeeRemoteNodeDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 BeeRemoteNodeDefaultTypeInternal _BeeRemoteNode_default_instance_;
 
-inline constexpr WorkRequest::Impl_::Impl_(
-    ::_pbi::ConstantInitialized) noexcept
-      : _cached_size_{0},
-        job_id_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()),
-        request_id_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()),
-        external_id_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()),
-        path_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()),
-        segment_{nullptr},
-        remote_storage_target_{0u},
-        job_builder_{false},
-        stub_local_{false},
-        Type_{},
-        _oneof_case_{} {}
-
-template <typename>
-PROTOBUF_CONSTEXPR WorkRequest::WorkRequest(::_pbi::ConstantInitialized)
-#if defined(PROTOBUF_CUSTOM_VTABLE)
-    : ::google::protobuf::Message(_class_data_.base()),
-#else   // PROTOBUF_CUSTOM_VTABLE
-    : ::google::protobuf::Message(),
-#endif  // PROTOBUF_CUSTOM_VTABLE
-      _impl_(::_pbi::ConstantInitialized()) {
-}
-struct WorkRequestDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR WorkRequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~WorkRequestDefaultTypeInternal() {}
-  union {
-    WorkRequest _instance;
-  };
-};
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 WorkRequestDefaultTypeInternal _WorkRequest_default_instance_;
-
 inline constexpr Work::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
       : _cached_size_{0},
@@ -515,6 +443,41 @@ struct WorkDefaultTypeInternal {
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 WorkDefaultTypeInternal _Work_default_instance_;
+
+inline constexpr SyncJob_SyncJobLockedInfo::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : _cached_size_{0},
+        stub_url_path_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        mtime_{nullptr},
+        remote_mtime_{nullptr},
+        locked_{false},
+        exists_{false},
+        mode_{0u},
+        size_{::int64_t{0}},
+        remote_size_{::int64_t{0}},
+        stub_url_rst_id_{0u} {}
+
+template <typename>
+PROTOBUF_CONSTEXPR SyncJob_SyncJobLockedInfo::SyncJob_SyncJobLockedInfo(::_pbi::ConstantInitialized)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(_class_data_.base()),
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(),
+#endif  // PROTOBUF_CUSTOM_VTABLE
+      _impl_(::_pbi::ConstantInitialized()) {
+}
+struct SyncJob_SyncJobLockedInfoDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR SyncJob_SyncJobLockedInfoDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~SyncJob_SyncJobLockedInfoDefaultTypeInternal() {}
+  union {
+    SyncJob_SyncJobLockedInfo _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SyncJob_SyncJobLockedInfoDefaultTypeInternal _SyncJob_SyncJobLockedInfo_default_instance_;
 
 inline constexpr RemoteStorageTarget_Azure::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
@@ -595,6 +558,37 @@ struct UpdateWorkResponseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 UpdateWorkResponseDefaultTypeInternal _UpdateWorkResponse_default_instance_;
 
+inline constexpr SyncJob::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : _cached_size_{0},
+        remote_path_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        lockedinfo_{nullptr},
+        operation_{static_cast< ::flex::SyncJob_Operation >(0)},
+        overwrite_{false},
+        flatten_{false} {}
+
+template <typename>
+PROTOBUF_CONSTEXPR SyncJob::SyncJob(::_pbi::ConstantInitialized)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(_class_data_.base()),
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(),
+#endif  // PROTOBUF_CUSTOM_VTABLE
+      _impl_(::_pbi::ConstantInitialized()) {
+}
+struct SyncJobDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR SyncJobDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~SyncJobDefaultTypeInternal() {}
+  union {
+    SyncJob _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SyncJobDefaultTypeInternal _SyncJob_default_instance_;
+
 inline constexpr SubmitWorkResponse::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
       : _cached_size_{0},
@@ -619,31 +613,6 @@ struct SubmitWorkResponseDefaultTypeInternal {
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SubmitWorkResponseDefaultTypeInternal _SubmitWorkResponse_default_instance_;
-
-inline constexpr SubmitWorkRequest::Impl_::Impl_(
-    ::_pbi::ConstantInitialized) noexcept
-      : _cached_size_{0},
-        request_{nullptr} {}
-
-template <typename>
-PROTOBUF_CONSTEXPR SubmitWorkRequest::SubmitWorkRequest(::_pbi::ConstantInitialized)
-#if defined(PROTOBUF_CUSTOM_VTABLE)
-    : ::google::protobuf::Message(_class_data_.base()),
-#else   // PROTOBUF_CUSTOM_VTABLE
-    : ::google::protobuf::Message(),
-#endif  // PROTOBUF_CUSTOM_VTABLE
-      _impl_(::_pbi::ConstantInitialized()) {
-}
-struct SubmitWorkRequestDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR SubmitWorkRequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~SubmitWorkRequestDefaultTypeInternal() {}
-  union {
-    SubmitWorkRequest _instance;
-  };
-};
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SubmitWorkRequestDefaultTypeInternal _SubmitWorkRequest_default_instance_;
 
 inline constexpr RemoteStorageTarget::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
@@ -702,6 +671,48 @@ struct HeartbeatResponseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 HeartbeatResponseDefaultTypeInternal _HeartbeatResponse_default_instance_;
 
+inline constexpr WorkRequest::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : _cached_size_{0},
+        job_id_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        request_id_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        external_id_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        path_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        segment_{nullptr},
+        remote_storage_target_{0u},
+        job_builder_{false},
+        stub_local_{false},
+        Type_{},
+        _oneof_case_{} {}
+
+template <typename>
+PROTOBUF_CONSTEXPR WorkRequest::WorkRequest(::_pbi::ConstantInitialized)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(_class_data_.base()),
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(),
+#endif  // PROTOBUF_CUSTOM_VTABLE
+      _impl_(::_pbi::ConstantInitialized()) {
+}
+struct WorkRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR WorkRequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~WorkRequestDefaultTypeInternal() {}
+  union {
+    WorkRequest _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 WorkRequestDefaultTypeInternal _WorkRequest_default_instance_;
+
 inline constexpr UpdateConfigRequest::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
       : _cached_size_{0},
@@ -727,6 +738,31 @@ struct UpdateConfigRequestDefaultTypeInternal {
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 UpdateConfigRequestDefaultTypeInternal _UpdateConfigRequest_default_instance_;
+
+inline constexpr SubmitWorkRequest::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : _cached_size_{0},
+        request_{nullptr} {}
+
+template <typename>
+PROTOBUF_CONSTEXPR SubmitWorkRequest::SubmitWorkRequest(::_pbi::ConstantInitialized)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(_class_data_.base()),
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(),
+#endif  // PROTOBUF_CUSTOM_VTABLE
+      _impl_(::_pbi::ConstantInitialized()) {
+}
+struct SubmitWorkRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR SubmitWorkRequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~SubmitWorkRequestDefaultTypeInternal() {}
+  union {
+    SubmitWorkRequest _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SubmitWorkRequestDefaultTypeInternal _SubmitWorkRequest_default_instance_;
 }  // namespace flex
 static const ::_pb::EnumDescriptor* file_level_enum_descriptors_flex_2eproto[5];
 static constexpr const ::_pb::ServiceDescriptor**
@@ -881,7 +917,33 @@ const ::uint32_t
         PROTOBUF_FIELD_OFFSET(::flex::MockJob, _impl_.external_id_),
         PROTOBUF_FIELD_OFFSET(::flex::MockJob, _impl_.should_fail_),
         PROTOBUF_FIELD_OFFSET(::flex::MockJob, _impl_.can_retry_),
-        ~0u,  // no _has_bits_
+        PROTOBUF_FIELD_OFFSET(::flex::SyncJob_SyncJobLockedInfo, _impl_._has_bits_),
+        PROTOBUF_FIELD_OFFSET(::flex::SyncJob_SyncJobLockedInfo, _internal_metadata_),
+        ~0u,  // no _extensions_
+        ~0u,  // no _oneof_case_
+        ~0u,  // no _weak_field_map_
+        ~0u,  // no _inlined_string_donated_
+        ~0u,  // no _split_
+        ~0u,  // no sizeof(Split)
+        PROTOBUF_FIELD_OFFSET(::flex::SyncJob_SyncJobLockedInfo, _impl_.locked_),
+        PROTOBUF_FIELD_OFFSET(::flex::SyncJob_SyncJobLockedInfo, _impl_.exists_),
+        PROTOBUF_FIELD_OFFSET(::flex::SyncJob_SyncJobLockedInfo, _impl_.size_),
+        PROTOBUF_FIELD_OFFSET(::flex::SyncJob_SyncJobLockedInfo, _impl_.mode_),
+        PROTOBUF_FIELD_OFFSET(::flex::SyncJob_SyncJobLockedInfo, _impl_.mtime_),
+        PROTOBUF_FIELD_OFFSET(::flex::SyncJob_SyncJobLockedInfo, _impl_.remote_size_),
+        PROTOBUF_FIELD_OFFSET(::flex::SyncJob_SyncJobLockedInfo, _impl_.remote_mtime_),
+        PROTOBUF_FIELD_OFFSET(::flex::SyncJob_SyncJobLockedInfo, _impl_.stub_url_rst_id_),
+        PROTOBUF_FIELD_OFFSET(::flex::SyncJob_SyncJobLockedInfo, _impl_.stub_url_path_),
+        ~0u,
+        ~0u,
+        ~0u,
+        ~0u,
+        0,
+        ~0u,
+        1,
+        ~0u,
+        ~0u,
+        PROTOBUF_FIELD_OFFSET(::flex::SyncJob, _impl_._has_bits_),
         PROTOBUF_FIELD_OFFSET(::flex::SyncJob, _internal_metadata_),
         ~0u,  // no _extensions_
         ~0u,  // no _oneof_case_
@@ -893,6 +955,12 @@ const ::uint32_t
         PROTOBUF_FIELD_OFFSET(::flex::SyncJob, _impl_.overwrite_),
         PROTOBUF_FIELD_OFFSET(::flex::SyncJob, _impl_.remote_path_),
         PROTOBUF_FIELD_OFFSET(::flex::SyncJob, _impl_.flatten_),
+        PROTOBUF_FIELD_OFFSET(::flex::SyncJob, _impl_.lockedinfo_),
+        ~0u,
+        ~0u,
+        ~0u,
+        ~0u,
+        0,
         ~0u,  // no _has_bits_
         PROTOBUF_FIELD_OFFSET(::flex::Work_Status, _internal_metadata_),
         ~0u,  // no _extensions_
@@ -1052,18 +1120,19 @@ static const ::_pbi::MigrationSchema
         {93, -1, -1, sizeof(::flex::WorkRequest_Segment)},
         {105, 124, -1, sizeof(::flex::WorkRequest)},
         {134, -1, -1, sizeof(::flex::MockJob)},
-        {147, -1, -1, sizeof(::flex::SyncJob)},
-        {159, -1, -1, sizeof(::flex::Work_Status)},
-        {169, -1, -1, sizeof(::flex::Work_Part)},
-        {183, 197, -1, sizeof(::flex::Work)},
-        {203, 213, -1, sizeof(::flex::UpdateConfigRequest)},
-        {215, -1, -1, sizeof(::flex::UpdateConfigResponse)},
-        {225, -1, -1, sizeof(::flex::BeeRemoteNode)},
-        {235, -1, -1, sizeof(::flex::RemoteStorageTarget_Policies)},
-        {244, -1, -1, sizeof(::flex::RemoteStorageTarget_S3)},
-        {258, 268, -1, sizeof(::flex::RemoteStorageTarget_Azure)},
-        {270, -1, -1, sizeof(::flex::RemoteStorageTarget_POSIX)},
-        {279, 295, -1, sizeof(::flex::RemoteStorageTarget)},
+        {147, 164, -1, sizeof(::flex::SyncJob_SyncJobLockedInfo)},
+        {173, 186, -1, sizeof(::flex::SyncJob)},
+        {191, -1, -1, sizeof(::flex::Work_Status)},
+        {201, -1, -1, sizeof(::flex::Work_Part)},
+        {215, 229, -1, sizeof(::flex::Work)},
+        {235, 245, -1, sizeof(::flex::UpdateConfigRequest)},
+        {247, -1, -1, sizeof(::flex::UpdateConfigResponse)},
+        {257, -1, -1, sizeof(::flex::BeeRemoteNode)},
+        {267, -1, -1, sizeof(::flex::RemoteStorageTarget_Policies)},
+        {276, -1, -1, sizeof(::flex::RemoteStorageTarget_S3)},
+        {290, 300, -1, sizeof(::flex::RemoteStorageTarget_Azure)},
+        {302, -1, -1, sizeof(::flex::RemoteStorageTarget_POSIX)},
+        {311, 327, -1, sizeof(::flex::RemoteStorageTarget)},
 };
 static const ::_pb::Message* const file_default_instances[] = {
     &::flex::_HeartbeatRequest_default_instance_._instance,
@@ -1078,6 +1147,7 @@ static const ::_pb::Message* const file_default_instances[] = {
     &::flex::_WorkRequest_Segment_default_instance_._instance,
     &::flex::_WorkRequest_default_instance_._instance,
     &::flex::_MockJob_default_instance_._instance,
+    &::flex::_SyncJob_SyncJobLockedInfo_default_instance_._instance,
     &::flex::_SyncJob_default_instance_._instance,
     &::flex::_Work_Status_default_instance_._instance,
     &::flex::_Work_Part_default_instance_._instance,
@@ -1123,55 +1193,62 @@ const char descriptor_table_protodef_flex_2eproto[] ABSL_ATTRIBUTE_SECTION_VARIA
     "art\030\003 \001(\005\022\022\n\nparts_stop\030\004 \001(\005B\006\n\004Type\"t\n"
     "\007MockJob\022\031\n\021num_test_segments\030\001 \001(\005\022\021\n\tf"
     "ile_size\030\002 \001(\003\022\023\n\013external_id\030\003 \001(\t\022\023\n\013s"
-    "hould_fail\030\004 \001(\010\022\021\n\tcan_retry\030\005 \001(\010\"\246\001\n\007"
+    "hould_fail\030\004 \001(\010\022\021\n\tcan_retry\030\005 \001(\010\"\317\003\n\007"
     "SyncJob\022*\n\toperation\030\001 \001(\0162\027.flex.SyncJo"
     "b.Operation\022\021\n\toverwrite\030\002 \001(\010\022\023\n\013remote"
-    "_path\030\003 \001(\t\022\017\n\007flatten\030\005 \001(\010\"6\n\tOperatio"
-    "n\022\017\n\013UNSPECIFIED\020\000\022\n\n\006UPLOAD\020\001\022\014\n\010DOWNLO"
-    "AD\020\002\"\333\003\n\004Work\022\014\n\004path\030\001 \001(\t\022\016\n\006job_id\030\002 "
-    "\001(\t\022\022\n\nrequest_id\030\003 \001(\t\022!\n\006status\030\004 \001(\0132"
-    "\021.flex.Work.Status\022\036\n\005parts\030\005 \003(\0132\017.flex"
-    ".Work.Part\022\023\n\013job_builder\030\006 \001(\010\032:\n\006Statu"
-    "s\022\037\n\005state\030\001 \001(\0162\020.flex.Work.State\022\017\n\007me"
-    "ssage\030\002 \001(\t\032\206\001\n\004Part\022\023\n\013part_number\030\001 \001("
-    "\005\022\024\n\014offset_start\030\002 \001(\003\022\023\n\013offset_stop\030\003"
-    " \001(\003\022\022\n\nentity_tag\030\004 \001(\t\022\027\n\017checksum_sha"
-    "256\030\005 \001(\t\022\021\n\tcompleted\030\006 \001(\010\"\203\001\n\005State\022\017"
-    "\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\013\n\007CREATED\020"
-    "\002\022\r\n\tSCHEDULED\020\003\022\013\n\007RUNNING\020\004\022\t\n\005ERROR\020\006"
-    "\022\n\n\006FAILED\020\007\022\r\n\tCANCELLED\020\010\022\r\n\tCOMPLETED"
-    "\020\t\"g\n\023UpdateConfigRequest\022\'\n\nbee_remote\030"
-    "\001 \001(\0132\023.flex.BeeRemoteNode\022\'\n\004rsts\030\002 \003(\013"
-    "2\031.flex.RemoteStorageTarget\"\234\001\n\024UpdateCo"
-    "nfigResponse\0221\n\006result\030\001 \001(\0162!.flex.Upda"
-    "teConfigResponse.Result\022\017\n\007message\030\002 \001(\t"
-    "\"@\n\006Result\022\017\n\013UNSPECIFIED\020\000\022\013\n\007SUCCESS\020\001"
-    "\022\013\n\007PARTIAL\020\002\022\013\n\007FAILURE\020\003\",\n\rBeeRemoteN"
-    "ode\022\n\n\002id\030\001 \001(\t\022\017\n\007address\030\002 \001(\t\"\213\004\n\023Rem"
-    "oteStorageTarget\022\n\n\002id\030\001 \001(\r\022\014\n\004name\030\002 \001"
-    "(\t\0224\n\010policies\030\003 \001(\0132\".flex.RemoteStorag"
-    "eTarget.Policies\022*\n\002s3\030\004 \001(\0132\034.flex.Remo"
-    "teStorageTarget.S3H\000\0220\n\005posix\030\005 \001(\0132\037.fl"
-    "ex.RemoteStorageTarget.POSIXH\000\0220\n\005azure\030"
-    "\006 \001(\0132\037.flex.RemoteStorageTarget.AzureH\000"
-    "\022\016\n\004mock\030\007 \001(\tH\000\032\'\n\010Policies\022\033\n\023fast_sta"
-    "rt_max_size\030\001 \001(\003\032x\n\002S3\022\024\n\014endpoint_url\030"
-    "\001 \001(\t\022\024\n\014partition_id\030\002 \001(\t\022\016\n\006region\030\003 "
-    "\001(\t\022\016\n\006bucket\030\004 \001(\t\022\022\n\naccess_key\030\005 \001(\t\022"
-    "\022\n\nsecret_key\030\006 \001(\t\032B\n\005Azure\022(\n\002s3\030\001 \001(\013"
-    "2\034.flex.RemoteStorageTarget.S3\022\017\n\007accoun"
-    "t\030\002 \001(\t\032\025\n\005POSIX\022\014\n\004path\030\001 \001(\tB\006\n\004type2\340"
-    "\002\n\nWorkerNode\022E\n\014UpdateConfig\022\031.flex.Upd"
-    "ateConfigRequest\032\032.flex.UpdateConfigResp"
-    "onse\022<\n\tHeartbeat\022\026.flex.HeartbeatReques"
-    "t\032\027.flex.HeartbeatResponse\022\?\n\nSubmitWork"
-    "\022\027.flex.SubmitWorkRequest\032\030.flex.SubmitW"
-    "orkResponse\022\?\n\nUpdateWork\022\027.flex.UpdateW"
-    "orkRequest\032\030.flex.UpdateWorkResponse\022K\n\016"
-    "BulkUpdateWork\022\033.flex.BulkUpdateWorkRequ"
-    "est\032\034.flex.BulkUpdateWorkResponseB\'Z%git"
-    "hub.com/thinkparq/protobuf/go/flexb\006prot"
-    "o3"
+    "_path\030\003 \001(\t\022\017\n\007flatten\030\005 \001(\010\0223\n\nlockedIn"
+    "fo\030\006 \001(\0132\037.flex.SyncJob.SyncJobLockedInf"
+    "o\032\361\001\n\021SyncJobLockedInfo\022\016\n\006locked\030\001 \001(\010\022"
+    "\016\n\006exists\030\002 \001(\010\022\014\n\004size\030\003 \001(\003\022\014\n\004mode\030\004 "
+    "\001(\r\022)\n\005mtime\030\005 \001(\0132\032.google.protobuf.Tim"
+    "estamp\022\023\n\013remote_size\030\006 \001(\003\0220\n\014remote_mt"
+    "ime\030\007 \001(\0132\032.google.protobuf.Timestamp\022\027\n"
+    "\017stub_url_rst_id\030\010 \001(\r\022\025\n\rstub_url_path\030"
+    "\t \001(\t\"6\n\tOperation\022\017\n\013UNSPECIFIED\020\000\022\n\n\006U"
+    "PLOAD\020\001\022\014\n\010DOWNLOAD\020\002\"\333\003\n\004Work\022\014\n\004path\030\001"
+    " \001(\t\022\016\n\006job_id\030\002 \001(\t\022\022\n\nrequest_id\030\003 \001(\t"
+    "\022!\n\006status\030\004 \001(\0132\021.flex.Work.Status\022\036\n\005p"
+    "arts\030\005 \003(\0132\017.flex.Work.Part\022\023\n\013job_build"
+    "er\030\006 \001(\010\032:\n\006Status\022\037\n\005state\030\001 \001(\0162\020.flex"
+    ".Work.State\022\017\n\007message\030\002 \001(\t\032\206\001\n\004Part\022\023\n"
+    "\013part_number\030\001 \001(\005\022\024\n\014offset_start\030\002 \001(\003"
+    "\022\023\n\013offset_stop\030\003 \001(\003\022\022\n\nentity_tag\030\004 \001("
+    "\t\022\027\n\017checksum_sha256\030\005 \001(\t\022\021\n\tcompleted\030"
+    "\006 \001(\010\"\203\001\n\005State\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKN"
+    "OWN\020\001\022\013\n\007CREATED\020\002\022\r\n\tSCHEDULED\020\003\022\013\n\007RUN"
+    "NING\020\004\022\t\n\005ERROR\020\006\022\n\n\006FAILED\020\007\022\r\n\tCANCELL"
+    "ED\020\010\022\r\n\tCOMPLETED\020\t\"g\n\023UpdateConfigReque"
+    "st\022\'\n\nbee_remote\030\001 \001(\0132\023.flex.BeeRemoteN"
+    "ode\022\'\n\004rsts\030\002 \003(\0132\031.flex.RemoteStorageTa"
+    "rget\"\234\001\n\024UpdateConfigResponse\0221\n\006result\030"
+    "\001 \001(\0162!.flex.UpdateConfigResponse.Result"
+    "\022\017\n\007message\030\002 \001(\t\"@\n\006Result\022\017\n\013UNSPECIFI"
+    "ED\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007PARTIAL\020\002\022\013\n\007FAILUR"
+    "E\020\003\",\n\rBeeRemoteNode\022\n\n\002id\030\001 \001(\t\022\017\n\007addr"
+    "ess\030\002 \001(\t\"\213\004\n\023RemoteStorageTarget\022\n\n\002id\030"
+    "\001 \001(\r\022\014\n\004name\030\002 \001(\t\0224\n\010policies\030\003 \001(\0132\"."
+    "flex.RemoteStorageTarget.Policies\022*\n\002s3\030"
+    "\004 \001(\0132\034.flex.RemoteStorageTarget.S3H\000\0220\n"
+    "\005posix\030\005 \001(\0132\037.flex.RemoteStorageTarget."
+    "POSIXH\000\0220\n\005azure\030\006 \001(\0132\037.flex.RemoteStor"
+    "ageTarget.AzureH\000\022\016\n\004mock\030\007 \001(\tH\000\032\'\n\010Pol"
+    "icies\022\033\n\023fast_start_max_size\030\001 \001(\003\032x\n\002S3"
+    "\022\024\n\014endpoint_url\030\001 \001(\t\022\024\n\014partition_id\030\002"
+    " \001(\t\022\016\n\006region\030\003 \001(\t\022\016\n\006bucket\030\004 \001(\t\022\022\n\n"
+    "access_key\030\005 \001(\t\022\022\n\nsecret_key\030\006 \001(\t\032B\n\005"
+    "Azure\022(\n\002s3\030\001 \001(\0132\034.flex.RemoteStorageTa"
+    "rget.S3\022\017\n\007account\030\002 \001(\t\032\025\n\005POSIX\022\014\n\004pat"
+    "h\030\001 \001(\tB\006\n\004type2\340\002\n\nWorkerNode\022E\n\014Update"
+    "Config\022\031.flex.UpdateConfigRequest\032\032.flex"
+    ".UpdateConfigResponse\022<\n\tHeartbeat\022\026.fle"
+    "x.HeartbeatRequest\032\027.flex.HeartbeatRespo"
+    "nse\022\?\n\nSubmitWork\022\027.flex.SubmitWorkReque"
+    "st\032\030.flex.SubmitWorkResponse\022\?\n\nUpdateWo"
+    "rk\022\027.flex.UpdateWorkRequest\032\030.flex.Updat"
+    "eWorkResponse\022K\n\016BulkUpdateWork\022\033.flex.B"
+    "ulkUpdateWorkRequest\032\034.flex.BulkUpdateWo"
+    "rkResponseB\'Z%github.com/thinkparq/proto"
+    "buf/go/flexb\006proto3"
 };
 static const ::_pbi::DescriptorTable* const descriptor_table_flex_2eproto_deps[1] =
     {
@@ -1181,13 +1258,13 @@ static ::absl::once_flag descriptor_table_flex_2eproto_once;
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_flex_2eproto = {
     false,
     false,
-    3122,
+    3419,
     descriptor_table_protodef_flex_2eproto,
     "flex.proto",
     &descriptor_table_flex_2eproto_once,
     descriptor_table_flex_2eproto_deps,
     1,
-    24,
+    25,
     schemas,
     file_default_instances,
     TableStruct_flex_2eproto::offsets,
@@ -4812,8 +4889,500 @@ void MockJob::InternalSwap(MockJob* PROTOBUF_RESTRICT other) {
 }
 // ===================================================================
 
+class SyncJob_SyncJobLockedInfo::_Internal {
+ public:
+  using HasBits =
+      decltype(std::declval<SyncJob_SyncJobLockedInfo>()._impl_._has_bits_);
+  static constexpr ::int32_t kHasBitsOffset =
+      8 * PROTOBUF_FIELD_OFFSET(SyncJob_SyncJobLockedInfo, _impl_._has_bits_);
+};
+
+void SyncJob_SyncJobLockedInfo::clear_mtime() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (_impl_.mtime_ != nullptr) _impl_.mtime_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+void SyncJob_SyncJobLockedInfo::clear_remote_mtime() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (_impl_.remote_mtime_ != nullptr) _impl_.remote_mtime_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000002u;
+}
+SyncJob_SyncJobLockedInfo::SyncJob_SyncJobLockedInfo(::google::protobuf::Arena* arena)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, _class_data_.base()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:flex.SyncJob.SyncJobLockedInfo)
+}
+inline PROTOBUF_NDEBUG_INLINE SyncJob_SyncJobLockedInfo::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
+    const Impl_& from, const ::flex::SyncJob_SyncJobLockedInfo& from_msg)
+      : _has_bits_{from._has_bits_},
+        _cached_size_{0},
+        stub_url_path_(arena, from.stub_url_path_) {}
+
+SyncJob_SyncJobLockedInfo::SyncJob_SyncJobLockedInfo(
+    ::google::protobuf::Arena* arena,
+    const SyncJob_SyncJobLockedInfo& from)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, _class_data_.base()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  SyncJob_SyncJobLockedInfo* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+  ::uint32_t cached_has_bits = _impl_._has_bits_[0];
+  _impl_.mtime_ = (cached_has_bits & 0x00000001u) ? ::google::protobuf::Message::CopyConstruct<::google::protobuf::Timestamp>(
+                              arena, *from._impl_.mtime_)
+                        : nullptr;
+  _impl_.remote_mtime_ = (cached_has_bits & 0x00000002u) ? ::google::protobuf::Message::CopyConstruct<::google::protobuf::Timestamp>(
+                              arena, *from._impl_.remote_mtime_)
+                        : nullptr;
+  ::memcpy(reinterpret_cast<char *>(&_impl_) +
+               offsetof(Impl_, locked_),
+           reinterpret_cast<const char *>(&from._impl_) +
+               offsetof(Impl_, locked_),
+           offsetof(Impl_, stub_url_rst_id_) -
+               offsetof(Impl_, locked_) +
+               sizeof(Impl_::stub_url_rst_id_));
+
+  // @@protoc_insertion_point(copy_constructor:flex.SyncJob.SyncJobLockedInfo)
+}
+inline PROTOBUF_NDEBUG_INLINE SyncJob_SyncJobLockedInfo::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility,
+    ::google::protobuf::Arena* arena)
+      : _cached_size_{0},
+        stub_url_path_(arena) {}
+
+inline void SyncJob_SyncJobLockedInfo::SharedCtor(::_pb::Arena* arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+  ::memset(reinterpret_cast<char *>(&_impl_) +
+               offsetof(Impl_, mtime_),
+           0,
+           offsetof(Impl_, stub_url_rst_id_) -
+               offsetof(Impl_, mtime_) +
+               sizeof(Impl_::stub_url_rst_id_));
+}
+SyncJob_SyncJobLockedInfo::~SyncJob_SyncJobLockedInfo() {
+  // @@protoc_insertion_point(destructor:flex.SyncJob.SyncJobLockedInfo)
+  SharedDtor(*this);
+}
+inline void SyncJob_SyncJobLockedInfo::SharedDtor(MessageLite& self) {
+  SyncJob_SyncJobLockedInfo& this_ = static_cast<SyncJob_SyncJobLockedInfo&>(self);
+  this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  ABSL_DCHECK(this_.GetArena() == nullptr);
+  this_._impl_.stub_url_path_.Destroy();
+  delete this_._impl_.mtime_;
+  delete this_._impl_.remote_mtime_;
+  this_._impl_.~Impl_();
+}
+
+inline void* SyncJob_SyncJobLockedInfo::PlacementNew_(const void*, void* mem,
+                                        ::google::protobuf::Arena* arena) {
+  return ::new (mem) SyncJob_SyncJobLockedInfo(arena);
+}
+constexpr auto SyncJob_SyncJobLockedInfo::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(SyncJob_SyncJobLockedInfo),
+                                            alignof(SyncJob_SyncJobLockedInfo));
+}
+PROTOBUF_CONSTINIT
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::google::protobuf::internal::ClassDataFull SyncJob_SyncJobLockedInfo::_class_data_ = {
+    ::google::protobuf::internal::ClassData{
+        &_SyncJob_SyncJobLockedInfo_default_instance_._instance,
+        &_table_.header,
+        nullptr,  // OnDemandRegisterArenaDtor
+        nullptr,  // IsInitialized
+        &SyncJob_SyncJobLockedInfo::MergeImpl,
+        ::google::protobuf::Message::GetNewImpl<SyncJob_SyncJobLockedInfo>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        &SyncJob_SyncJobLockedInfo::SharedDtor,
+        ::google::protobuf::Message::GetClearImpl<SyncJob_SyncJobLockedInfo>(), &SyncJob_SyncJobLockedInfo::ByteSizeLong,
+            &SyncJob_SyncJobLockedInfo::_InternalSerialize,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+        PROTOBUF_FIELD_OFFSET(SyncJob_SyncJobLockedInfo, _impl_._cached_size_),
+        false,
+    },
+    &SyncJob_SyncJobLockedInfo::kDescriptorMethods,
+    &descriptor_table_flex_2eproto,
+    nullptr,  // tracker
+};
+const ::google::protobuf::internal::ClassData* SyncJob_SyncJobLockedInfo::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(_class_data_.tc_table);
+  return _class_data_.base();
+}
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::_pbi::TcParseTable<4, 9, 2, 60, 2> SyncJob_SyncJobLockedInfo::_table_ = {
+  {
+    PROTOBUF_FIELD_OFFSET(SyncJob_SyncJobLockedInfo, _impl_._has_bits_),
+    0, // no _extensions_
+    9, 120,  // max_field_number, fast_idx_mask
+    offsetof(decltype(_table_), field_lookup_table),
+    4294966784,  // skipmap
+    offsetof(decltype(_table_), field_entries),
+    9,  // num_field_entries
+    2,  // num_aux_entries
+    offsetof(decltype(_table_), aux_entries),
+    _class_data_.base(),
+    nullptr,  // post_loop_handler
+    ::_pbi::TcParser::GenericFallback,  // fallback
+    #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+    ::_pbi::TcParser::GetTable<::flex::SyncJob_SyncJobLockedInfo>(),  // to_prefetch
+    #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+  }, {{
+    {::_pbi::TcParser::MiniParse, {}},
+    // bool locked = 1;
+    {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(SyncJob_SyncJobLockedInfo, _impl_.locked_), 63>(),
+     {8, 63, 0, PROTOBUF_FIELD_OFFSET(SyncJob_SyncJobLockedInfo, _impl_.locked_)}},
+    // bool exists = 2;
+    {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(SyncJob_SyncJobLockedInfo, _impl_.exists_), 63>(),
+     {16, 63, 0, PROTOBUF_FIELD_OFFSET(SyncJob_SyncJobLockedInfo, _impl_.exists_)}},
+    // int64 size = 3;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(SyncJob_SyncJobLockedInfo, _impl_.size_), 63>(),
+     {24, 63, 0, PROTOBUF_FIELD_OFFSET(SyncJob_SyncJobLockedInfo, _impl_.size_)}},
+    // uint32 mode = 4;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(SyncJob_SyncJobLockedInfo, _impl_.mode_), 63>(),
+     {32, 63, 0, PROTOBUF_FIELD_OFFSET(SyncJob_SyncJobLockedInfo, _impl_.mode_)}},
+    // .google.protobuf.Timestamp mtime = 5;
+    {::_pbi::TcParser::FastMtS1,
+     {42, 0, 0, PROTOBUF_FIELD_OFFSET(SyncJob_SyncJobLockedInfo, _impl_.mtime_)}},
+    // int64 remote_size = 6;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(SyncJob_SyncJobLockedInfo, _impl_.remote_size_), 63>(),
+     {48, 63, 0, PROTOBUF_FIELD_OFFSET(SyncJob_SyncJobLockedInfo, _impl_.remote_size_)}},
+    // .google.protobuf.Timestamp remote_mtime = 7;
+    {::_pbi::TcParser::FastMtS1,
+     {58, 1, 1, PROTOBUF_FIELD_OFFSET(SyncJob_SyncJobLockedInfo, _impl_.remote_mtime_)}},
+    // uint32 stub_url_rst_id = 8;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(SyncJob_SyncJobLockedInfo, _impl_.stub_url_rst_id_), 63>(),
+     {64, 63, 0, PROTOBUF_FIELD_OFFSET(SyncJob_SyncJobLockedInfo, _impl_.stub_url_rst_id_)}},
+    // string stub_url_path = 9;
+    {::_pbi::TcParser::FastUS1,
+     {74, 63, 0, PROTOBUF_FIELD_OFFSET(SyncJob_SyncJobLockedInfo, _impl_.stub_url_path_)}},
+    {::_pbi::TcParser::MiniParse, {}},
+    {::_pbi::TcParser::MiniParse, {}},
+    {::_pbi::TcParser::MiniParse, {}},
+    {::_pbi::TcParser::MiniParse, {}},
+    {::_pbi::TcParser::MiniParse, {}},
+    {::_pbi::TcParser::MiniParse, {}},
+  }}, {{
+    65535, 65535
+  }}, {{
+    // bool locked = 1;
+    {PROTOBUF_FIELD_OFFSET(SyncJob_SyncJobLockedInfo, _impl_.locked_), -1, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kBool)},
+    // bool exists = 2;
+    {PROTOBUF_FIELD_OFFSET(SyncJob_SyncJobLockedInfo, _impl_.exists_), -1, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kBool)},
+    // int64 size = 3;
+    {PROTOBUF_FIELD_OFFSET(SyncJob_SyncJobLockedInfo, _impl_.size_), -1, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kInt64)},
+    // uint32 mode = 4;
+    {PROTOBUF_FIELD_OFFSET(SyncJob_SyncJobLockedInfo, _impl_.mode_), -1, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kUInt32)},
+    // .google.protobuf.Timestamp mtime = 5;
+    {PROTOBUF_FIELD_OFFSET(SyncJob_SyncJobLockedInfo, _impl_.mtime_), _Internal::kHasBitsOffset + 0, 0,
+    (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
+    // int64 remote_size = 6;
+    {PROTOBUF_FIELD_OFFSET(SyncJob_SyncJobLockedInfo, _impl_.remote_size_), -1, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kInt64)},
+    // .google.protobuf.Timestamp remote_mtime = 7;
+    {PROTOBUF_FIELD_OFFSET(SyncJob_SyncJobLockedInfo, _impl_.remote_mtime_), _Internal::kHasBitsOffset + 1, 1,
+    (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
+    // uint32 stub_url_rst_id = 8;
+    {PROTOBUF_FIELD_OFFSET(SyncJob_SyncJobLockedInfo, _impl_.stub_url_rst_id_), -1, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kUInt32)},
+    // string stub_url_path = 9;
+    {PROTOBUF_FIELD_OFFSET(SyncJob_SyncJobLockedInfo, _impl_.stub_url_path_), -1, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
+  }}, {{
+    {::_pbi::TcParser::GetTable<::google::protobuf::Timestamp>()},
+    {::_pbi::TcParser::GetTable<::google::protobuf::Timestamp>()},
+  }}, {{
+    "\36\0\0\0\0\0\0\0\0\15\0\0\0\0\0\0"
+    "flex.SyncJob.SyncJobLockedInfo"
+    "stub_url_path"
+  }},
+};
+
+PROTOBUF_NOINLINE void SyncJob_SyncJobLockedInfo::Clear() {
+// @@protoc_insertion_point(message_clear_start:flex.SyncJob.SyncJobLockedInfo)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.stub_url_path_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      ABSL_DCHECK(_impl_.mtime_ != nullptr);
+      _impl_.mtime_->Clear();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      ABSL_DCHECK(_impl_.remote_mtime_ != nullptr);
+      _impl_.remote_mtime_->Clear();
+    }
+  }
+  ::memset(&_impl_.locked_, 0, static_cast<::size_t>(
+      reinterpret_cast<char*>(&_impl_.stub_url_rst_id_) -
+      reinterpret_cast<char*>(&_impl_.locked_)) + sizeof(_impl_.stub_url_rst_id_));
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        ::uint8_t* SyncJob_SyncJobLockedInfo::_InternalSerialize(
+            const MessageLite& base, ::uint8_t* target,
+            ::google::protobuf::io::EpsCopyOutputStream* stream) {
+          const SyncJob_SyncJobLockedInfo& this_ = static_cast<const SyncJob_SyncJobLockedInfo&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+        ::uint8_t* SyncJob_SyncJobLockedInfo::_InternalSerialize(
+            ::uint8_t* target,
+            ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+          const SyncJob_SyncJobLockedInfo& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          // @@protoc_insertion_point(serialize_to_array_start:flex.SyncJob.SyncJobLockedInfo)
+          ::uint32_t cached_has_bits = 0;
+          (void)cached_has_bits;
+
+          // bool locked = 1;
+          if (this_._internal_locked() != 0) {
+            target = stream->EnsureSpace(target);
+            target = ::_pbi::WireFormatLite::WriteBoolToArray(
+                1, this_._internal_locked(), target);
+          }
+
+          // bool exists = 2;
+          if (this_._internal_exists() != 0) {
+            target = stream->EnsureSpace(target);
+            target = ::_pbi::WireFormatLite::WriteBoolToArray(
+                2, this_._internal_exists(), target);
+          }
+
+          // int64 size = 3;
+          if (this_._internal_size() != 0) {
+            target = ::google::protobuf::internal::WireFormatLite::
+                WriteInt64ToArrayWithField<3>(
+                    stream, this_._internal_size(), target);
+          }
+
+          // uint32 mode = 4;
+          if (this_._internal_mode() != 0) {
+            target = stream->EnsureSpace(target);
+            target = ::_pbi::WireFormatLite::WriteUInt32ToArray(
+                4, this_._internal_mode(), target);
+          }
+
+          cached_has_bits = this_._impl_._has_bits_[0];
+          // .google.protobuf.Timestamp mtime = 5;
+          if (cached_has_bits & 0x00000001u) {
+            target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+                5, *this_._impl_.mtime_, this_._impl_.mtime_->GetCachedSize(), target,
+                stream);
+          }
+
+          // int64 remote_size = 6;
+          if (this_._internal_remote_size() != 0) {
+            target = ::google::protobuf::internal::WireFormatLite::
+                WriteInt64ToArrayWithField<6>(
+                    stream, this_._internal_remote_size(), target);
+          }
+
+          // .google.protobuf.Timestamp remote_mtime = 7;
+          if (cached_has_bits & 0x00000002u) {
+            target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+                7, *this_._impl_.remote_mtime_, this_._impl_.remote_mtime_->GetCachedSize(), target,
+                stream);
+          }
+
+          // uint32 stub_url_rst_id = 8;
+          if (this_._internal_stub_url_rst_id() != 0) {
+            target = stream->EnsureSpace(target);
+            target = ::_pbi::WireFormatLite::WriteUInt32ToArray(
+                8, this_._internal_stub_url_rst_id(), target);
+          }
+
+          // string stub_url_path = 9;
+          if (!this_._internal_stub_url_path().empty()) {
+            const std::string& _s = this_._internal_stub_url_path();
+            ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "flex.SyncJob.SyncJobLockedInfo.stub_url_path");
+            target = stream->WriteStringMaybeAliased(9, _s, target);
+          }
+
+          if (PROTOBUF_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
+            target =
+                ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+                    this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+          }
+          // @@protoc_insertion_point(serialize_to_array_end:flex.SyncJob.SyncJobLockedInfo)
+          return target;
+        }
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        ::size_t SyncJob_SyncJobLockedInfo::ByteSizeLong(const MessageLite& base) {
+          const SyncJob_SyncJobLockedInfo& this_ = static_cast<const SyncJob_SyncJobLockedInfo&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+        ::size_t SyncJob_SyncJobLockedInfo::ByteSizeLong() const {
+          const SyncJob_SyncJobLockedInfo& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          // @@protoc_insertion_point(message_byte_size_start:flex.SyncJob.SyncJobLockedInfo)
+          ::size_t total_size = 0;
+
+          ::uint32_t cached_has_bits = 0;
+          // Prevent compiler warnings about cached_has_bits being unused
+          (void)cached_has_bits;
+
+          ::_pbi::Prefetch5LinesFrom7Lines(&this_);
+           {
+            // string stub_url_path = 9;
+            if (!this_._internal_stub_url_path().empty()) {
+              total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                              this_._internal_stub_url_path());
+            }
+          }
+          cached_has_bits = this_._impl_._has_bits_[0];
+          if (cached_has_bits & 0x00000003u) {
+            // .google.protobuf.Timestamp mtime = 5;
+            if (cached_has_bits & 0x00000001u) {
+              total_size += 1 +
+                            ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.mtime_);
+            }
+            // .google.protobuf.Timestamp remote_mtime = 7;
+            if (cached_has_bits & 0x00000002u) {
+              total_size += 1 +
+                            ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.remote_mtime_);
+            }
+          }
+           {
+            // bool locked = 1;
+            if (this_._internal_locked() != 0) {
+              total_size += 2;
+            }
+            // bool exists = 2;
+            if (this_._internal_exists() != 0) {
+              total_size += 2;
+            }
+            // uint32 mode = 4;
+            if (this_._internal_mode() != 0) {
+              total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(
+                  this_._internal_mode());
+            }
+            // int64 size = 3;
+            if (this_._internal_size() != 0) {
+              total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
+                  this_._internal_size());
+            }
+            // int64 remote_size = 6;
+            if (this_._internal_remote_size() != 0) {
+              total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
+                  this_._internal_remote_size());
+            }
+            // uint32 stub_url_rst_id = 8;
+            if (this_._internal_stub_url_rst_id() != 0) {
+              total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(
+                  this_._internal_stub_url_rst_id());
+            }
+          }
+          return this_.MaybeComputeUnknownFieldsSize(total_size,
+                                                     &this_._impl_._cached_size_);
+        }
+
+void SyncJob_SyncJobLockedInfo::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
+  auto* const _this = static_cast<SyncJob_SyncJobLockedInfo*>(&to_msg);
+  auto& from = static_cast<const SyncJob_SyncJobLockedInfo&>(from_msg);
+  ::google::protobuf::Arena* arena = _this->GetArena();
+  // @@protoc_insertion_point(class_specific_merge_from_start:flex.SyncJob.SyncJobLockedInfo)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (!from._internal_stub_url_path().empty()) {
+    _this->_internal_set_stub_url_path(from._internal_stub_url_path());
+  }
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      ABSL_DCHECK(from._impl_.mtime_ != nullptr);
+      if (_this->_impl_.mtime_ == nullptr) {
+        _this->_impl_.mtime_ =
+            ::google::protobuf::Message::CopyConstruct<::google::protobuf::Timestamp>(arena, *from._impl_.mtime_);
+      } else {
+        _this->_impl_.mtime_->MergeFrom(*from._impl_.mtime_);
+      }
+    }
+    if (cached_has_bits & 0x00000002u) {
+      ABSL_DCHECK(from._impl_.remote_mtime_ != nullptr);
+      if (_this->_impl_.remote_mtime_ == nullptr) {
+        _this->_impl_.remote_mtime_ =
+            ::google::protobuf::Message::CopyConstruct<::google::protobuf::Timestamp>(arena, *from._impl_.remote_mtime_);
+      } else {
+        _this->_impl_.remote_mtime_->MergeFrom(*from._impl_.remote_mtime_);
+      }
+    }
+  }
+  if (from._internal_locked() != 0) {
+    _this->_impl_.locked_ = from._impl_.locked_;
+  }
+  if (from._internal_exists() != 0) {
+    _this->_impl_.exists_ = from._impl_.exists_;
+  }
+  if (from._internal_mode() != 0) {
+    _this->_impl_.mode_ = from._impl_.mode_;
+  }
+  if (from._internal_size() != 0) {
+    _this->_impl_.size_ = from._impl_.size_;
+  }
+  if (from._internal_remote_size() != 0) {
+    _this->_impl_.remote_size_ = from._impl_.remote_size_;
+  }
+  if (from._internal_stub_url_rst_id() != 0) {
+    _this->_impl_.stub_url_rst_id_ = from._impl_.stub_url_rst_id_;
+  }
+  _this->_impl_._has_bits_[0] |= cached_has_bits;
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void SyncJob_SyncJobLockedInfo::CopyFrom(const SyncJob_SyncJobLockedInfo& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:flex.SyncJob.SyncJobLockedInfo)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+
+void SyncJob_SyncJobLockedInfo::InternalSwap(SyncJob_SyncJobLockedInfo* PROTOBUF_RESTRICT other) {
+  using std::swap;
+  auto* arena = GetArena();
+  ABSL_DCHECK_EQ(arena, other->GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.stub_url_path_, &other->_impl_.stub_url_path_, arena);
+  ::google::protobuf::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SyncJob_SyncJobLockedInfo, _impl_.stub_url_rst_id_)
+      + sizeof(SyncJob_SyncJobLockedInfo::_impl_.stub_url_rst_id_)
+      - PROTOBUF_FIELD_OFFSET(SyncJob_SyncJobLockedInfo, _impl_.mtime_)>(
+          reinterpret_cast<char*>(&_impl_.mtime_),
+          reinterpret_cast<char*>(&other->_impl_.mtime_));
+}
+
+::google::protobuf::Metadata SyncJob_SyncJobLockedInfo::GetMetadata() const {
+  return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
+}
+// ===================================================================
+
 class SyncJob::_Internal {
  public:
+  using HasBits =
+      decltype(std::declval<SyncJob>()._impl_._has_bits_);
+  static constexpr ::int32_t kHasBitsOffset =
+      8 * PROTOBUF_FIELD_OFFSET(SyncJob, _impl_._has_bits_);
 };
 
 SyncJob::SyncJob(::google::protobuf::Arena* arena)
@@ -4828,8 +5397,9 @@ SyncJob::SyncJob(::google::protobuf::Arena* arena)
 inline PROTOBUF_NDEBUG_INLINE SyncJob::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
     const Impl_& from, const ::flex::SyncJob& from_msg)
-      : remote_path_(arena, from.remote_path_),
-        _cached_size_{0} {}
+      : _has_bits_{from._has_bits_},
+        _cached_size_{0},
+        remote_path_(arena, from.remote_path_) {}
 
 SyncJob::SyncJob(
     ::google::protobuf::Arena* arena,
@@ -4844,6 +5414,10 @@ SyncJob::SyncJob(
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+  ::uint32_t cached_has_bits = _impl_._has_bits_[0];
+  _impl_.lockedinfo_ = (cached_has_bits & 0x00000001u) ? ::google::protobuf::Message::CopyConstruct<::flex::SyncJob_SyncJobLockedInfo>(
+                              arena, *from._impl_.lockedinfo_)
+                        : nullptr;
   ::memcpy(reinterpret_cast<char *>(&_impl_) +
                offsetof(Impl_, operation_),
            reinterpret_cast<const char *>(&from._impl_) +
@@ -4857,16 +5431,16 @@ SyncJob::SyncJob(
 inline PROTOBUF_NDEBUG_INLINE SyncJob::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
-      : remote_path_(arena),
-        _cached_size_{0} {}
+      : _cached_size_{0},
+        remote_path_(arena) {}
 
 inline void SyncJob::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
   ::memset(reinterpret_cast<char *>(&_impl_) +
-               offsetof(Impl_, operation_),
+               offsetof(Impl_, lockedinfo_),
            0,
            offsetof(Impl_, flatten_) -
-               offsetof(Impl_, operation_) +
+               offsetof(Impl_, lockedinfo_) +
                sizeof(Impl_::flatten_));
 }
 SyncJob::~SyncJob() {
@@ -4878,6 +5452,7 @@ inline void SyncJob::SharedDtor(MessageLite& self) {
   this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
   ABSL_DCHECK(this_.GetArena() == nullptr);
   this_._impl_.remote_path_.Destroy();
+  delete this_._impl_.lockedinfo_;
   this_._impl_.~Impl_();
 }
 
@@ -4917,17 +5492,17 @@ const ::google::protobuf::internal::ClassData* SyncJob::GetClassData() const {
   return _class_data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<3, 4, 0, 32, 2> SyncJob::_table_ = {
+const ::_pbi::TcParseTable<3, 5, 1, 32, 2> SyncJob::_table_ = {
   {
-    0,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(SyncJob, _impl_._has_bits_),
     0, // no _extensions_
-    5, 56,  // max_field_number, fast_idx_mask
+    6, 56,  // max_field_number, fast_idx_mask
     offsetof(decltype(_table_), field_lookup_table),
-    4294967272,  // skipmap
+    4294967240,  // skipmap
     offsetof(decltype(_table_), field_entries),
-    4,  // num_field_entries
-    0,  // num_aux_entries
-    offsetof(decltype(_table_), field_names),  // no aux_entries
+    5,  // num_field_entries
+    1,  // num_aux_entries
+    offsetof(decltype(_table_), aux_entries),
     _class_data_.base(),
     nullptr,  // post_loop_handler
     ::_pbi::TcParser::GenericFallback,  // fallback
@@ -4949,26 +5524,31 @@ const ::_pbi::TcParseTable<3, 4, 0, 32, 2> SyncJob::_table_ = {
     // bool flatten = 5;
     {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(SyncJob, _impl_.flatten_), 63>(),
      {40, 63, 0, PROTOBUF_FIELD_OFFSET(SyncJob, _impl_.flatten_)}},
-    {::_pbi::TcParser::MiniParse, {}},
+    // .flex.SyncJob.SyncJobLockedInfo lockedInfo = 6;
+    {::_pbi::TcParser::FastMtS1,
+     {50, 0, 0, PROTOBUF_FIELD_OFFSET(SyncJob, _impl_.lockedinfo_)}},
     {::_pbi::TcParser::MiniParse, {}},
   }}, {{
     65535, 65535
   }}, {{
     // .flex.SyncJob.Operation operation = 1;
-    {PROTOBUF_FIELD_OFFSET(SyncJob, _impl_.operation_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(SyncJob, _impl_.operation_), -1, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kOpenEnum)},
     // bool overwrite = 2;
-    {PROTOBUF_FIELD_OFFSET(SyncJob, _impl_.overwrite_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(SyncJob, _impl_.overwrite_), -1, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kBool)},
     // string remote_path = 3;
-    {PROTOBUF_FIELD_OFFSET(SyncJob, _impl_.remote_path_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(SyncJob, _impl_.remote_path_), -1, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // bool flatten = 5;
-    {PROTOBUF_FIELD_OFFSET(SyncJob, _impl_.flatten_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(SyncJob, _impl_.flatten_), -1, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kBool)},
-  }},
-  // no aux_entries
-  {{
+    // .flex.SyncJob.SyncJobLockedInfo lockedInfo = 6;
+    {PROTOBUF_FIELD_OFFSET(SyncJob, _impl_.lockedinfo_), _Internal::kHasBitsOffset + 0, 0,
+    (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
+  }}, {{
+    {::_pbi::TcParser::GetTable<::flex::SyncJob_SyncJobLockedInfo>()},
+  }}, {{
     "\14\0\0\13\0\0\0\0"
     "flex.SyncJob"
     "remote_path"
@@ -4983,9 +5563,15 @@ PROTOBUF_NOINLINE void SyncJob::Clear() {
   (void) cached_has_bits;
 
   _impl_.remote_path_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    ABSL_DCHECK(_impl_.lockedinfo_ != nullptr);
+    _impl_.lockedinfo_->Clear();
+  }
   ::memset(&_impl_.operation_, 0, static_cast<::size_t>(
       reinterpret_cast<char*>(&_impl_.flatten_) -
       reinterpret_cast<char*>(&_impl_.operation_)) + sizeof(_impl_.flatten_));
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
 
@@ -5033,6 +5619,14 @@ PROTOBUF_NOINLINE void SyncJob::Clear() {
                 5, this_._internal_flatten(), target);
           }
 
+          cached_has_bits = this_._impl_._has_bits_[0];
+          // .flex.SyncJob.SyncJobLockedInfo lockedInfo = 6;
+          if (cached_has_bits & 0x00000001u) {
+            target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+                6, *this_._impl_.lockedinfo_, this_._impl_.lockedinfo_->GetCachedSize(), target,
+                stream);
+          }
+
           if (PROTOBUF_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
             target =
                 ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
@@ -5063,6 +5657,16 @@ PROTOBUF_NOINLINE void SyncJob::Clear() {
               total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
                                               this_._internal_remote_path());
             }
+          }
+           {
+            // .flex.SyncJob.SyncJobLockedInfo lockedInfo = 6;
+            cached_has_bits = this_._impl_._has_bits_[0];
+            if (cached_has_bits & 0x00000001u) {
+              total_size += 1 +
+                            ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.lockedinfo_);
+            }
+          }
+           {
             // .flex.SyncJob.Operation operation = 1;
             if (this_._internal_operation() != 0) {
               total_size += 1 +
@@ -5084,6 +5688,7 @@ PROTOBUF_NOINLINE void SyncJob::Clear() {
 void SyncJob::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
   auto* const _this = static_cast<SyncJob*>(&to_msg);
   auto& from = static_cast<const SyncJob&>(from_msg);
+  ::google::protobuf::Arena* arena = _this->GetArena();
   // @@protoc_insertion_point(class_specific_merge_from_start:flex.SyncJob)
   ABSL_DCHECK_NE(&from, _this);
   ::uint32_t cached_has_bits = 0;
@@ -5091,6 +5696,16 @@ void SyncJob::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google:
 
   if (!from._internal_remote_path().empty()) {
     _this->_internal_set_remote_path(from._internal_remote_path());
+  }
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    ABSL_DCHECK(from._impl_.lockedinfo_ != nullptr);
+    if (_this->_impl_.lockedinfo_ == nullptr) {
+      _this->_impl_.lockedinfo_ =
+          ::google::protobuf::Message::CopyConstruct<::flex::SyncJob_SyncJobLockedInfo>(arena, *from._impl_.lockedinfo_);
+    } else {
+      _this->_impl_.lockedinfo_->MergeFrom(*from._impl_.lockedinfo_);
+    }
   }
   if (from._internal_operation() != 0) {
     _this->_impl_.operation_ = from._impl_.operation_;
@@ -5101,6 +5716,7 @@ void SyncJob::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google:
   if (from._internal_flatten() != 0) {
     _this->_impl_.flatten_ = from._impl_.flatten_;
   }
+  _this->_impl_._has_bits_[0] |= cached_has_bits;
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
 
@@ -5117,13 +5733,14 @@ void SyncJob::InternalSwap(SyncJob* PROTOBUF_RESTRICT other) {
   auto* arena = GetArena();
   ABSL_DCHECK_EQ(arena, other->GetArena());
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.remote_path_, &other->_impl_.remote_path_, arena);
   ::google::protobuf::internal::memswap<
       PROTOBUF_FIELD_OFFSET(SyncJob, _impl_.flatten_)
       + sizeof(SyncJob::_impl_.flatten_)
-      - PROTOBUF_FIELD_OFFSET(SyncJob, _impl_.operation_)>(
-          reinterpret_cast<char*>(&_impl_.operation_),
-          reinterpret_cast<char*>(&other->_impl_.operation_));
+      - PROTOBUF_FIELD_OFFSET(SyncJob, _impl_.lockedinfo_)>(
+          reinterpret_cast<char*>(&_impl_.lockedinfo_),
+          reinterpret_cast<char*>(&other->_impl_.lockedinfo_));
 }
 
 ::google::protobuf::Metadata SyncJob::GetMetadata() const {

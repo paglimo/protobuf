@@ -33,6 +33,7 @@ pub mod submit_job_response {
         Existing = 2,
         NotAllowed = 3,
         AlreadyComplete = 4,
+        AlreadyOffloaded = 5,
     }
     impl ResponseStatus {
         /// String value of the enum field names used in the ProtoBuf definition.
@@ -46,6 +47,7 @@ pub mod submit_job_response {
                 ResponseStatus::Existing => "EXISTING",
                 ResponseStatus::NotAllowed => "NOT_ALLOWED",
                 ResponseStatus::AlreadyComplete => "ALREADY_COMPLETE",
+                ResponseStatus::AlreadyOffloaded => "ALREADY_OFFLOADED",
             }
         }
         /// Creates an enum from field names used in the ProtoBuf definition.
@@ -56,6 +58,7 @@ pub mod submit_job_response {
                 "EXISTING" => Some(Self::Existing),
                 "NOT_ALLOWED" => Some(Self::NotAllowed),
                 "ALREADY_COMPLETE" => Some(Self::AlreadyComplete),
+                "ALREADY_OFFLOADED" => Some(Self::AlreadyOffloaded),
                 _ => None,
             }
         }
@@ -88,13 +91,10 @@ pub struct JobRequest {
     /// to know if a particular job request was forced.
     #[prost(bool, tag = "5")]
     pub force: bool,
-    /// Indicates whether the job is a job builder task.
-    #[prost(bool, tag = "6")]
-    pub job_builder: bool,
     /// When stub_local is set the local file with be a stub file
     #[prost(bool, tag = "7")]
     pub stub_local: bool,
-    #[prost(oneof = "job_request::Type", tags = "10, 11")]
+    #[prost(oneof = "job_request::Type", tags = "10, 11, 12")]
     pub r#type: ::core::option::Option<job_request::Type>,
 }
 /// Nested message and enum types in `JobRequest`.
@@ -106,6 +106,8 @@ pub mod job_request {
         Sync(super::super::flex::SyncJob),
         #[prost(message, tag = "11")]
         Mock(super::super::flex::MockJob),
+        #[prost(message, tag = "12")]
+        Builder(super::super::flex::BuilderJob),
     }
 }
 /// Job contains all the data from the original request plus the job ID and
@@ -480,35 +482,6 @@ pub struct GetRstConfigResponse {
     #[prost(message, repeated, tag = "1")]
     pub rsts: ::prost::alloc::vec::Vec<super::flex::RemoteStorageTarget>,
 }
-#[allow(clippy::derive_partial_eq_without_eq)]
-#[derive(Clone, PartialEq, ::prost::Message)]
-pub struct GetGlobalFlagsRequest {}
-#[allow(clippy::derive_partial_eq_without_eq)]
-#[derive(Clone, PartialEq, ::prost::Message)]
-pub struct GetGlobalFlagsResponse {
-    #[prost(string, tag = "1")]
-    pub remote_address: ::prost::alloc::string::String,
-    #[prost(string, tag = "2")]
-    pub mgmtd_address: ::prost::alloc::string::String,
-    #[prost(string, tag = "3")]
-    pub mount: ::prost::alloc::string::String,
-    #[prost(string, tag = "4")]
-    pub mgmtd_tls_cert_file: ::prost::alloc::string::String,
-    #[prost(bool, tag = "5")]
-    pub mgmtd_tls_disable_verification: bool,
-    #[prost(bool, tag = "6")]
-    pub mgmtd_tls_disable: bool,
-    #[prost(string, tag = "7")]
-    pub auth_file: ::prost::alloc::string::String,
-    #[prost(bool, tag = "8")]
-    pub auth_disable: bool,
-    #[prost(int32, tag = "9")]
-    pub num_workers: i32,
-    #[prost(int32, tag = "10")]
-    pub conn_timeout_ms: i32,
-    #[prost(int32, tag = "11")]
-    pub log_level: i32,
-}
 /// Generated client implementations.
 pub mod bee_remote_client {
     #![allow(unused_variables, dead_code, missing_docs, clippy::let_unit_value)]
@@ -755,31 +728,6 @@ pub mod bee_remote_client {
                 .insert(GrpcMethod::new("beeremote.BeeRemote", "GetRSTConfig"));
             self.inner.unary(req, path, codec).await
         }
-        pub async fn get_global_flags(
-            &mut self,
-            request: impl tonic::IntoRequest<super::GetGlobalFlagsRequest>,
-        ) -> std::result::Result<
-            tonic::Response<super::GetGlobalFlagsResponse>,
-            tonic::Status,
-        > {
-            self.inner
-                .ready()
-                .await
-                .map_err(|e| {
-                    tonic::Status::new(
-                        tonic::Code::Unknown,
-                        format!("Service was not ready: {}", e.into()),
-                    )
-                })?;
-            let codec = tonic::codec::ProstCodec::default();
-            let path = http::uri::PathAndQuery::from_static(
-                "/beeremote.BeeRemote/GetGlobalFlags",
-            );
-            let mut req = request.into_request();
-            req.extensions_mut()
-                .insert(GrpcMethod::new("beeremote.BeeRemote", "GetGlobalFlags"));
-            self.inner.unary(req, path, codec).await
-        }
     }
 }
 /// Generated server implementations.
@@ -847,13 +795,6 @@ pub mod bee_remote_server {
             request: tonic::Request<super::GetRstConfigRequest>,
         ) -> std::result::Result<
             tonic::Response<super::GetRstConfigResponse>,
-            tonic::Status,
-        >;
-        async fn get_global_flags(
-            &self,
-            request: tonic::Request<super::GetGlobalFlagsRequest>,
-        ) -> std::result::Result<
-            tonic::Response<super::GetGlobalFlagsResponse>,
             tonic::Status,
         >;
     }
@@ -1201,52 +1142,6 @@ pub mod bee_remote_server {
                     let fut = async move {
                         let inner = inner.0;
                         let method = GetRSTConfigSvc(inner);
-                        let codec = tonic::codec::ProstCodec::default();
-                        let mut grpc = tonic::server::Grpc::new(codec)
-                            .apply_compression_config(
-                                accept_compression_encodings,
-                                send_compression_encodings,
-                            )
-                            .apply_max_message_size_config(
-                                max_decoding_message_size,
-                                max_encoding_message_size,
-                            );
-                        let res = grpc.unary(method, req).await;
-                        Ok(res)
-                    };
-                    Box::pin(fut)
-                }
-                "/beeremote.BeeRemote/GetGlobalFlags" => {
-                    #[allow(non_camel_case_types)]
-                    struct GetGlobalFlagsSvc<T: BeeRemote>(pub Arc<T>);
-                    impl<
-                        T: BeeRemote,
-                    > tonic::server::UnaryService<super::GetGlobalFlagsRequest>
-                    for GetGlobalFlagsSvc<T> {
-                        type Response = super::GetGlobalFlagsResponse;
-                        type Future = BoxFuture<
-                            tonic::Response<Self::Response>,
-                            tonic::Status,
-                        >;
-                        fn call(
-                            &mut self,
-                            request: tonic::Request<super::GetGlobalFlagsRequest>,
-                        ) -> Self::Future {
-                            let inner = Arc::clone(&self.0);
-                            let fut = async move {
-                                <T as BeeRemote>::get_global_flags(&inner, request).await
-                            };
-                            Box::pin(fut)
-                        }
-                    }
-                    let accept_compression_encodings = self.accept_compression_encodings;
-                    let send_compression_encodings = self.send_compression_encodings;
-                    let max_decoding_message_size = self.max_decoding_message_size;
-                    let max_encoding_message_size = self.max_encoding_message_size;
-                    let inner = self.inner.clone();
-                    let fut = async move {
-                        let inner = inner.0;
-                        let method = GetGlobalFlagsSvc(inner);
                         let codec = tonic::codec::ProstCodec::default();
                         let mut grpc = tonic::server::Grpc::new(codec)
                             .apply_compression_config(

@@ -23,7 +23,6 @@ service BeeRemote {
     // by worker nodes.
     rpc UpdateWork(UpdateWorkRequest) returns (UpdateWorkResponse);
     rpc GetRSTConfig(GetRSTConfigRequest) returns (GetRSTConfigResponse);
-    rpc GetGlobalFlags(GetGlobalFlagsRequest) returns (GetGlobalFlagsResponse);
 }
 
 message SubmitJobRequest {
@@ -39,6 +38,7 @@ message SubmitJobResponse {
         EXISTING = 2;
         NOT_ALLOWED = 3;
         ALREADY_COMPLETE = 4;
+        ALREADY_OFFLOADED = 5;
     }
 }
 
@@ -60,14 +60,13 @@ message JobRequest {
     oneof type {
         flex.SyncJob sync = 10;
         flex.MockJob mock = 11;
+        flex.BuilderJob builder = 12;
     }
     // When force is set this request will create a new job even if there is already a completed
     // job. When forced the request will return an error if there is already a job running. This is
     // part of the JobRequest instead of the SubmitJobRequest message in case it ever is important
     // to know if a particular job request was forced.
     bool force = 5;
-    // Indicates whether the job is a job builder task.
-    bool job_builder = 6;
     // When stub_local is set the local file with be a stub file
     bool stub_local = 7;
 }
@@ -291,21 +290,4 @@ message GetRSTConfigRequest {
 
 message GetRSTConfigResponse {
     repeated flex.RemoteStorageTarget rsts = 1;
-}
-
-message GetGlobalFlagsRequest {
-}
-
-message GetGlobalFlagsResponse {
-    string remote_address = 1;
-    string mgmtd_address = 2;
-    string mount = 3;
-    string mgmtd_tls_cert_file = 4;
-    bool mgmtd_tls_disable_verification = 5;
-    bool mgmtd_tls_disable = 6;
-    string auth_file = 7;
-    bool auth_disable = 8;
-    int32 num_workers = 9;
-    int32 conn_timeout_ms = 10;
-    int32 log_level = 11;
 }

@@ -110,69 +110,6 @@ struct GetJobsRequest_QueryIdAndPathDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetJobsRequest_QueryIdAndPathDefaultTypeInternal _GetJobsRequest_QueryIdAndPath_default_instance_;
 
-inline constexpr GetGlobalFlagsResponse::Impl_::Impl_(
-    ::_pbi::ConstantInitialized) noexcept
-      : remote_address_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()),
-        mgmtd_address_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()),
-        mount_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()),
-        mgmtd_tls_cert_file_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()),
-        auth_file_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()),
-        mgmtd_tls_disable_verification_{false},
-        mgmtd_tls_disable_{false},
-        auth_disable_{false},
-        num_workers_{0},
-        conn_timeout_ms_{0},
-        log_level_{0},
-        _cached_size_{0} {}
-
-template <typename>
-PROTOBUF_CONSTEXPR GetGlobalFlagsResponse::GetGlobalFlagsResponse(::_pbi::ConstantInitialized)
-#if defined(PROTOBUF_CUSTOM_VTABLE)
-    : ::google::protobuf::Message(_class_data_.base()),
-#else   // PROTOBUF_CUSTOM_VTABLE
-    : ::google::protobuf::Message(),
-#endif  // PROTOBUF_CUSTOM_VTABLE
-      _impl_(::_pbi::ConstantInitialized()) {
-}
-struct GetGlobalFlagsResponseDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR GetGlobalFlagsResponseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~GetGlobalFlagsResponseDefaultTypeInternal() {}
-  union {
-    GetGlobalFlagsResponse _instance;
-  };
-};
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetGlobalFlagsResponseDefaultTypeInternal _GetGlobalFlagsResponse_default_instance_;
-              template <typename>
-PROTOBUF_CONSTEXPR GetGlobalFlagsRequest::GetGlobalFlagsRequest(::_pbi::ConstantInitialized)
-#if defined(PROTOBUF_CUSTOM_VTABLE)
-    : ::google::protobuf::internal::ZeroFieldsBase(_class_data_.base()){}
-#else   // PROTOBUF_CUSTOM_VTABLE
-    : ::google::protobuf::internal::ZeroFieldsBase() {
-}
-#endif  // PROTOBUF_CUSTOM_VTABLE
-struct GetGlobalFlagsRequestDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR GetGlobalFlagsRequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~GetGlobalFlagsRequestDefaultTypeInternal() {}
-  union {
-    GetGlobalFlagsRequest _instance;
-  };
-};
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetGlobalFlagsRequestDefaultTypeInternal _GetGlobalFlagsRequest_default_instance_;
-
 inline constexpr UpdateJobsRequest::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
       : _cached_size_{0},
@@ -348,43 +285,6 @@ struct JobResult_WorkResultDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 JobResult_WorkResultDefaultTypeInternal _JobResult_WorkResult_default_instance_;
 
-inline constexpr JobRequest::Impl_::Impl_(
-    ::_pbi::ConstantInitialized) noexcept
-      : path_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()),
-        name_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()),
-        priority_{0},
-        remote_storage_target_{0u},
-        force_{false},
-        job_builder_{false},
-        stub_local_{false},
-        type_{},
-        _cached_size_{0},
-        _oneof_case_{} {}
-
-template <typename>
-PROTOBUF_CONSTEXPR JobRequest::JobRequest(::_pbi::ConstantInitialized)
-#if defined(PROTOBUF_CUSTOM_VTABLE)
-    : ::google::protobuf::Message(_class_data_.base()),
-#else   // PROTOBUF_CUSTOM_VTABLE
-    : ::google::protobuf::Message(),
-#endif  // PROTOBUF_CUSTOM_VTABLE
-      _impl_(::_pbi::ConstantInitialized()) {
-}
-struct JobRequestDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR JobRequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~JobRequestDefaultTypeInternal() {}
-  union {
-    JobRequest _instance;
-  };
-};
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 JobRequestDefaultTypeInternal _JobRequest_default_instance_;
-
 inline constexpr GetRSTConfigResponse::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
       : rsts_{},
@@ -409,6 +309,42 @@ struct GetRSTConfigResponseDefaultTypeInternal {
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetRSTConfigResponseDefaultTypeInternal _GetRSTConfigResponse_default_instance_;
+
+inline constexpr JobRequest::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : path_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        name_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        priority_{0},
+        remote_storage_target_{0u},
+        force_{false},
+        stub_local_{false},
+        type_{},
+        _cached_size_{0},
+        _oneof_case_{} {}
+
+template <typename>
+PROTOBUF_CONSTEXPR JobRequest::JobRequest(::_pbi::ConstantInitialized)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(_class_data_.base()),
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(),
+#endif  // PROTOBUF_CUSTOM_VTABLE
+      _impl_(::_pbi::ConstantInitialized()) {
+}
+struct JobRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR JobRequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~JobRequestDefaultTypeInternal() {}
+  union {
+    JobRequest _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 JobRequestDefaultTypeInternal _JobRequest_default_instance_;
 
 inline constexpr SubmitJobRequest::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
@@ -650,8 +586,8 @@ const ::uint32_t
         PROTOBUF_FIELD_OFFSET(::beeremote::JobRequest, _impl_.remote_storage_target_),
         ::_pbi::kInvalidFieldOffsetTag,
         ::_pbi::kInvalidFieldOffsetTag,
+        ::_pbi::kInvalidFieldOffsetTag,
         PROTOBUF_FIELD_OFFSET(::beeremote::JobRequest, _impl_.force_),
-        PROTOBUF_FIELD_OFFSET(::beeremote::JobRequest, _impl_.job_builder_),
         PROTOBUF_FIELD_OFFSET(::beeremote::JobRequest, _impl_.stub_local_),
         PROTOBUF_FIELD_OFFSET(::beeremote::JobRequest, _impl_.type_),
         PROTOBUF_FIELD_OFFSET(::beeremote::Job_Status, _impl_._has_bits_),
@@ -853,33 +789,6 @@ const ::uint32_t
         ~0u,  // no _split_
         ~0u,  // no sizeof(Split)
         PROTOBUF_FIELD_OFFSET(::beeremote::GetRSTConfigResponse, _impl_.rsts_),
-        ~0u,  // no _has_bits_
-        PROTOBUF_FIELD_OFFSET(::beeremote::GetGlobalFlagsRequest, _internal_metadata_),
-        ~0u,  // no _extensions_
-        ~0u,  // no _oneof_case_
-        ~0u,  // no _weak_field_map_
-        ~0u,  // no _inlined_string_donated_
-        ~0u,  // no _split_
-        ~0u,  // no sizeof(Split)
-        ~0u,  // no _has_bits_
-        PROTOBUF_FIELD_OFFSET(::beeremote::GetGlobalFlagsResponse, _internal_metadata_),
-        ~0u,  // no _extensions_
-        ~0u,  // no _oneof_case_
-        ~0u,  // no _weak_field_map_
-        ~0u,  // no _inlined_string_donated_
-        ~0u,  // no _split_
-        ~0u,  // no sizeof(Split)
-        PROTOBUF_FIELD_OFFSET(::beeremote::GetGlobalFlagsResponse, _impl_.remote_address_),
-        PROTOBUF_FIELD_OFFSET(::beeremote::GetGlobalFlagsResponse, _impl_.mgmtd_address_),
-        PROTOBUF_FIELD_OFFSET(::beeremote::GetGlobalFlagsResponse, _impl_.mount_),
-        PROTOBUF_FIELD_OFFSET(::beeremote::GetGlobalFlagsResponse, _impl_.mgmtd_tls_cert_file_),
-        PROTOBUF_FIELD_OFFSET(::beeremote::GetGlobalFlagsResponse, _impl_.mgmtd_tls_disable_verification_),
-        PROTOBUF_FIELD_OFFSET(::beeremote::GetGlobalFlagsResponse, _impl_.mgmtd_tls_disable_),
-        PROTOBUF_FIELD_OFFSET(::beeremote::GetGlobalFlagsResponse, _impl_.auth_file_),
-        PROTOBUF_FIELD_OFFSET(::beeremote::GetGlobalFlagsResponse, _impl_.auth_disable_),
-        PROTOBUF_FIELD_OFFSET(::beeremote::GetGlobalFlagsResponse, _impl_.num_workers_),
-        PROTOBUF_FIELD_OFFSET(::beeremote::GetGlobalFlagsResponse, _impl_.conn_timeout_ms_),
-        PROTOBUF_FIELD_OFFSET(::beeremote::GetGlobalFlagsResponse, _impl_.log_level_),
 };
 
 static const ::_pbi::MigrationSchema
@@ -903,8 +812,6 @@ static const ::_pbi::MigrationSchema
         {214, -1, -1, sizeof(::beeremote::UpdateWorkResponse)},
         {222, -1, -1, sizeof(::beeremote::GetRSTConfigRequest)},
         {230, -1, -1, sizeof(::beeremote::GetRSTConfigResponse)},
-        {239, -1, -1, sizeof(::beeremote::GetGlobalFlagsRequest)},
-        {247, -1, -1, sizeof(::beeremote::GetGlobalFlagsResponse)},
 };
 static const ::_pb::Message* const file_default_instances[] = {
     &::beeremote::_SubmitJobRequest_default_instance_._instance,
@@ -926,97 +833,86 @@ static const ::_pb::Message* const file_default_instances[] = {
     &::beeremote::_UpdateWorkResponse_default_instance_._instance,
     &::beeremote::_GetRSTConfigRequest_default_instance_._instance,
     &::beeremote::_GetRSTConfigResponse_default_instance_._instance,
-    &::beeremote::_GetGlobalFlagsRequest_default_instance_._instance,
-    &::beeremote::_GetGlobalFlagsResponse_default_instance_._instance,
 };
 const char descriptor_table_protodef_beeremote_2eproto[] ABSL_ATTRIBUTE_SECTION_VARIABLE(
     protodesc_cold) = {
     "\n\017beeremote.proto\022\tbeeremote\032\nflex.proto"
     "\032\037google/protobuf/timestamp.proto\":\n\020Sub"
     "mitJobRequest\022&\n\007request\030\001 \001(\0132\025.beeremo"
-    "te.JobRequest\"\327\001\n\021SubmitJobResponse\022$\n\006r"
+    "te.JobRequest\"\356\001\n\021SubmitJobResponse\022$\n\006r"
     "esult\030\001 \001(\0132\024.beeremote.JobResult\022;\n\006sta"
     "tus\030\002 \001(\0162+.beeremote.SubmitJobResponse."
-    "ResponseStatus\"_\n\016ResponseStatus\022\013\n\007INVA"
+    "ResponseStatus\"v\n\016ResponseStatus\022\013\n\007INVA"
     "LID\020\000\022\013\n\007CREATED\020\001\022\014\n\010EXISTING\020\002\022\017\n\013NOT_"
-    "ALLOWED\020\003\022\024\n\020ALREADY_COMPLETE\020\004\"\327\001\n\nJobR"
-    "equest\022\014\n\004path\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\020\n\010pr"
-    "iority\030\003 \001(\005\022\035\n\025remote_storage_target\030\004 "
-    "\001(\r\022\035\n\004sync\030\n \001(\0132\r.flex.SyncJobH\000\022\035\n\004mo"
-    "ck\030\013 \001(\0132\r.flex.MockJobH\000\022\r\n\005force\030\005 \001(\010"
-    "\022\023\n\013job_builder\030\006 \001(\010\022\022\n\nstub_local\030\007 \001("
-    "\010B\006\n\004type\"\261\004\n\003Job\022\n\n\002id\030\001 \001(\t\022&\n\007request"
-    "\030\002 \001(\0132\025.beeremote.JobRequest\022+\n\007created"
-    "\030\003 \001(\0132\032.google.protobuf.Timestamp\022%\n\006st"
-    "atus\030\004 \001(\0132\025.beeremote.Job.Status\022\023\n\013ext"
-    "ernal_id\030\005 \001(\t\0224\n\013start_mtime\030\006 \001(\0132\032.go"
-    "ogle.protobuf.TimestampH\000\210\001\001\0223\n\nstop_mti"
-    "me\030\007 \001(\0132\032.google.protobuf.TimestampH\001\210\001"
-    "\001\032k\n\006Status\022#\n\005state\030\001 \001(\0162\024.beeremote.J"
-    "ob.State\022\017\n\007message\030\002 \001(\t\022+\n\007updated\030\003 \001"
-    "(\0132\032.google.protobuf.Timestamp\"\225\001\n\005State"
-    "\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\016\n\nUNASSI"
-    "GNED\020\002\022\r\n\tSCHEDULED\020\003\022\013\n\007RUNNING\020\004\022\t\n\005ER"
-    "ROR\020\006\022\n\n\006FAILED\020\007\022\r\n\tCANCELLED\020\010\022\r\n\tCOMP"
-    "LETED\020\t\022\r\n\tOFFLOADED\020\nB\016\n\014_start_mtimeB\r"
-    "\n\013_stop_mtime\"\337\001\n\tJobResult\022\033\n\003job\030\001 \001(\013"
-    "2\016.beeremote.Job\022(\n\rwork_requests\030\002 \003(\0132"
-    "\021.flex.WorkRequest\0225\n\014work_results\030\003 \003(\013"
-    "2\037.beeremote.JobResult.WorkResult\032T\n\nWor"
-    "kResult\022\030\n\004work\030\001 \001(\0132\n.flex.Work\022\025\n\rass"
-    "igned_node\030\002 \001(\t\022\025\n\rassigned_pool\030\003 \001(\t\""
-    "a\n\022UpdatePathsRequest\022\023\n\013path_prefix\030\001 \001"
-    "(\t\0226\n\020requested_update\030\002 \001(\0132\034.beeremote"
-    ".UpdateJobsRequest\"Y\n\023UpdatePathsRespons"
-    "e\022\014\n\004path\030\001 \001(\t\0224\n\rupdate_result\030\002 \001(\0132\035"
-    ".beeremote.UpdateJobsResponse\"\311\002\n\021Update"
-    "JobsRequest\022\014\n\004path\030\001 \001(\t\022\023\n\006job_id\030\002 \001("
-    "\tH\000\210\001\001\022G\n\016remote_targets\030\003 \003(\0132/.beeremo"
-    "te.UpdateJobsRequest.RemoteTargetsEntry\022"
-    "8\n\tnew_state\030\n \001(\0162%.beeremote.UpdateJob"
-    "sRequest.NewState\022\024\n\014force_update\030\004 \001(\010\032"
-    "4\n\022RemoteTargetsEntry\022\013\n\003key\030\001 \001(\r\022\r\n\005va"
-    "lue\030\002 \001(\010:\0028\001\"7\n\010NewState\022\017\n\013UNSPECIFIED"
-    "\020\000\022\r\n\tCANCELLED\020\001\022\013\n\007DELETED\020\002B\t\n\007_job_i"
-    "d\"X\n\022UpdateJobsResponse\022\n\n\002ok\030\001 \001(\010\022\017\n\007m"
-    "essage\030\002 \001(\t\022%\n\007results\030\003 \003(\0132\024.beeremot"
-    "e.JobResult\"\236\002\n\016GetJobsRequest\022F\n\022by_job"
-    "_id_and_path\030\001 \001(\0132(.beeremote.GetJobsRe"
-    "quest.QueryIdAndPathH\000\022\027\n\rby_exact_path\030"
-    "\002 \001(\tH\000\022\030\n\016by_path_prefix\030\003 \001(\tH\000\022\035\n\025inc"
-    "lude_work_requests\030\004 \001(\010\022\034\n\024include_work"
-    "_results\030\005 \001(\010\022\033\n\023update_work_results\030\006 "
-    "\001(\010\032.\n\016QueryIdAndPath\022\016\n\006job_id\030\001 \001(\t\022\014\n"
-    "\004path\030\002 \001(\tB\007\n\005query\"F\n\017GetJobsResponse\022"
-    "\014\n\004path\030\001 \001(\t\022%\n\007results\030\002 \003(\0132\024.beeremo"
-    "te.JobResult\"-\n\021UpdateWorkRequest\022\030\n\004wor"
-    "k\030\001 \001(\0132\n.flex.Work\"\024\n\022UpdateWorkRespons"
-    "e\"\025\n\023GetRSTConfigRequest\"\?\n\024GetRSTConfig"
-    "Response\022\'\n\004rsts\030\001 \003(\0132\031.flex.RemoteStor"
-    "ageTarget\"\027\n\025GetGlobalFlagsRequest\"\240\002\n\026G"
-    "etGlobalFlagsResponse\022\026\n\016remote_address\030"
-    "\001 \001(\t\022\025\n\rmgmtd_address\030\002 \001(\t\022\r\n\005mount\030\003 "
-    "\001(\t\022\033\n\023mgmtd_tls_cert_file\030\004 \001(\t\022&\n\036mgmt"
-    "d_tls_disable_verification\030\005 \001(\010\022\031\n\021mgmt"
-    "d_tls_disable\030\006 \001(\010\022\021\n\tauth_file\030\007 \001(\t\022\024"
-    "\n\014auth_disable\030\010 \001(\010\022\023\n\013num_workers\030\t \001("
-    "\005\022\027\n\017conn_timeout_ms\030\n \001(\005\022\021\n\tlog_level\030"
-    "\013 \001(\0052\245\004\n\tBeeRemote\022F\n\tSubmitJob\022\033.beere"
-    "mote.SubmitJobRequest\032\034.beeremote.Submit"
-    "JobResponse\022N\n\013UpdatePaths\022\035.beeremote.U"
-    "pdatePathsRequest\032\036.beeremote.UpdatePath"
-    "sResponse0\001\022I\n\nUpdateJobs\022\034.beeremote.Up"
-    "dateJobsRequest\032\035.beeremote.UpdateJobsRe"
-    "sponse\022B\n\007GetJobs\022\031.beeremote.GetJobsReq"
-    "uest\032\032.beeremote.GetJobsResponse0\001\022I\n\nUp"
-    "dateWork\022\034.beeremote.UpdateWorkRequest\032\035"
-    ".beeremote.UpdateWorkResponse\022O\n\014GetRSTC"
-    "onfig\022\036.beeremote.GetRSTConfigRequest\032\037."
-    "beeremote.GetRSTConfigResponse\022U\n\016GetGlo"
-    "balFlags\022 .beeremote.GetGlobalFlagsReque"
-    "st\032!.beeremote.GetGlobalFlagsResponseB,Z"
-    "*github.com/thinkparq/protobuf/go/beerem"
-    "oteb\006proto3"
+    "ALLOWED\020\003\022\024\n\020ALREADY_COMPLETE\020\004\022\025\n\021ALREA"
+    "DY_OFFLOADED\020\005\"\347\001\n\nJobRequest\022\014\n\004path\030\001 "
+    "\001(\t\022\014\n\004name\030\002 \001(\t\022\020\n\010priority\030\003 \001(\005\022\035\n\025r"
+    "emote_storage_target\030\004 \001(\r\022\035\n\004sync\030\n \001(\013"
+    "2\r.flex.SyncJobH\000\022\035\n\004mock\030\013 \001(\0132\r.flex.M"
+    "ockJobH\000\022#\n\007builder\030\014 \001(\0132\020.flex.Builder"
+    "JobH\000\022\r\n\005force\030\005 \001(\010\022\022\n\nstub_local\030\007 \001(\010"
+    "B\006\n\004type\"\261\004\n\003Job\022\n\n\002id\030\001 \001(\t\022&\n\007request\030"
+    "\002 \001(\0132\025.beeremote.JobRequest\022+\n\007created\030"
+    "\003 \001(\0132\032.google.protobuf.Timestamp\022%\n\006sta"
+    "tus\030\004 \001(\0132\025.beeremote.Job.Status\022\023\n\013exte"
+    "rnal_id\030\005 \001(\t\0224\n\013start_mtime\030\006 \001(\0132\032.goo"
+    "gle.protobuf.TimestampH\000\210\001\001\0223\n\nstop_mtim"
+    "e\030\007 \001(\0132\032.google.protobuf.TimestampH\001\210\001\001"
+    "\032k\n\006Status\022#\n\005state\030\001 \001(\0162\024.beeremote.Jo"
+    "b.State\022\017\n\007message\030\002 \001(\t\022+\n\007updated\030\003 \001("
+    "\0132\032.google.protobuf.Timestamp\"\225\001\n\005State\022"
+    "\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\016\n\nUNASSIG"
+    "NED\020\002\022\r\n\tSCHEDULED\020\003\022\013\n\007RUNNING\020\004\022\t\n\005ERR"
+    "OR\020\006\022\n\n\006FAILED\020\007\022\r\n\tCANCELLED\020\010\022\r\n\tCOMPL"
+    "ETED\020\t\022\r\n\tOFFLOADED\020\nB\016\n\014_start_mtimeB\r\n"
+    "\013_stop_mtime\"\337\001\n\tJobResult\022\033\n\003job\030\001 \001(\0132"
+    "\016.beeremote.Job\022(\n\rwork_requests\030\002 \003(\0132\021"
+    ".flex.WorkRequest\0225\n\014work_results\030\003 \003(\0132"
+    "\037.beeremote.JobResult.WorkResult\032T\n\nWork"
+    "Result\022\030\n\004work\030\001 \001(\0132\n.flex.Work\022\025\n\rassi"
+    "gned_node\030\002 \001(\t\022\025\n\rassigned_pool\030\003 \001(\t\"a"
+    "\n\022UpdatePathsRequest\022\023\n\013path_prefix\030\001 \001("
+    "\t\0226\n\020requested_update\030\002 \001(\0132\034.beeremote."
+    "UpdateJobsRequest\"Y\n\023UpdatePathsResponse"
+    "\022\014\n\004path\030\001 \001(\t\0224\n\rupdate_result\030\002 \001(\0132\035."
+    "beeremote.UpdateJobsResponse\"\311\002\n\021UpdateJ"
+    "obsRequest\022\014\n\004path\030\001 \001(\t\022\023\n\006job_id\030\002 \001(\t"
+    "H\000\210\001\001\022G\n\016remote_targets\030\003 \003(\0132/.beeremot"
+    "e.UpdateJobsRequest.RemoteTargetsEntry\0228"
+    "\n\tnew_state\030\n \001(\0162%.beeremote.UpdateJobs"
+    "Request.NewState\022\024\n\014force_update\030\004 \001(\010\0324"
+    "\n\022RemoteTargetsEntry\022\013\n\003key\030\001 \001(\r\022\r\n\005val"
+    "ue\030\002 \001(\010:\0028\001\"7\n\010NewState\022\017\n\013UNSPECIFIED\020"
+    "\000\022\r\n\tCANCELLED\020\001\022\013\n\007DELETED\020\002B\t\n\007_job_id"
+    "\"X\n\022UpdateJobsResponse\022\n\n\002ok\030\001 \001(\010\022\017\n\007me"
+    "ssage\030\002 \001(\t\022%\n\007results\030\003 \003(\0132\024.beeremote"
+    ".JobResult\"\236\002\n\016GetJobsRequest\022F\n\022by_job_"
+    "id_and_path\030\001 \001(\0132(.beeremote.GetJobsReq"
+    "uest.QueryIdAndPathH\000\022\027\n\rby_exact_path\030\002"
+    " \001(\tH\000\022\030\n\016by_path_prefix\030\003 \001(\tH\000\022\035\n\025incl"
+    "ude_work_requests\030\004 \001(\010\022\034\n\024include_work_"
+    "results\030\005 \001(\010\022\033\n\023update_work_results\030\006 \001"
+    "(\010\032.\n\016QueryIdAndPath\022\016\n\006job_id\030\001 \001(\t\022\014\n\004"
+    "path\030\002 \001(\tB\007\n\005query\"F\n\017GetJobsResponse\022\014"
+    "\n\004path\030\001 \001(\t\022%\n\007results\030\002 \003(\0132\024.beeremot"
+    "e.JobResult\"-\n\021UpdateWorkRequest\022\030\n\004work"
+    "\030\001 \001(\0132\n.flex.Work\"\024\n\022UpdateWorkResponse"
+    "\"\025\n\023GetRSTConfigRequest\"\?\n\024GetRSTConfigR"
+    "esponse\022\'\n\004rsts\030\001 \003(\0132\031.flex.RemoteStora"
+    "geTarget2\316\003\n\tBeeRemote\022F\n\tSubmitJob\022\033.be"
+    "eremote.SubmitJobRequest\032\034.beeremote.Sub"
+    "mitJobResponse\022N\n\013UpdatePaths\022\035.beeremot"
+    "e.UpdatePathsRequest\032\036.beeremote.UpdateP"
+    "athsResponse0\001\022I\n\nUpdateJobs\022\034.beeremote"
+    ".UpdateJobsRequest\032\035.beeremote.UpdateJob"
+    "sResponse\022B\n\007GetJobs\022\031.beeremote.GetJobs"
+    "Request\032\032.beeremote.GetJobsResponse0\001\022I\n"
+    "\nUpdateWork\022\034.beeremote.UpdateWorkReques"
+    "t\032\035.beeremote.UpdateWorkResponse\022O\n\014GetR"
+    "STConfig\022\036.beeremote.GetRSTConfigRequest"
+    "\032\037.beeremote.GetRSTConfigResponseB,Z*git"
+    "hub.com/thinkparq/protobuf/go/beeremoteb"
+    "\006proto3"
 };
 static const ::_pbi::DescriptorTable* const descriptor_table_beeremote_2eproto_deps[2] =
     {
@@ -1027,13 +923,13 @@ static ::absl::once_flag descriptor_table_beeremote_2eproto_once;
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_beeremote_2eproto = {
     false,
     false,
-    3411,
+    3047,
     descriptor_table_protodef_beeremote_2eproto,
     "beeremote.proto",
     &descriptor_table_beeremote_2eproto_once,
     descriptor_table_beeremote_2eproto_deps,
     2,
-    21,
+    19,
     schemas,
     file_default_instances,
     TableStruct_beeremote_2eproto::offsets,
@@ -1046,9 +942,9 @@ const ::google::protobuf::EnumDescriptor* SubmitJobResponse_ResponseStatus_descr
   return file_level_enum_descriptors_beeremote_2eproto[0];
 }
 PROTOBUF_CONSTINIT const uint32_t SubmitJobResponse_ResponseStatus_internal_data_[] = {
-    327680u, 0u, };
+    393216u, 0u, };
 bool SubmitJobResponse_ResponseStatus_IsValid(int value) {
-  return 0 <= value && value <= 4;
+  return 0 <= value && value <= 5;
 }
 #if (__cplusplus < 201703) && \
   (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
@@ -1058,6 +954,7 @@ constexpr SubmitJobResponse_ResponseStatus SubmitJobResponse::CREATED;
 constexpr SubmitJobResponse_ResponseStatus SubmitJobResponse::EXISTING;
 constexpr SubmitJobResponse_ResponseStatus SubmitJobResponse::NOT_ALLOWED;
 constexpr SubmitJobResponse_ResponseStatus SubmitJobResponse::ALREADY_COMPLETE;
+constexpr SubmitJobResponse_ResponseStatus SubmitJobResponse::ALREADY_OFFLOADED;
 constexpr SubmitJobResponse_ResponseStatus SubmitJobResponse::ResponseStatus_MIN;
 constexpr SubmitJobResponse_ResponseStatus SubmitJobResponse::ResponseStatus_MAX;
 constexpr int SubmitJobResponse::ResponseStatus_ARRAYSIZE;
@@ -1705,6 +1602,30 @@ void JobRequest::clear_mock() {
     clear_has_type();
   }
 }
+void JobRequest::set_allocated_builder(::flex::BuilderJob* builder) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  clear_type();
+  if (builder) {
+    ::google::protobuf::Arena* submessage_arena = reinterpret_cast<::google::protobuf::MessageLite*>(builder)->GetArena();
+    if (message_arena != submessage_arena) {
+      builder = ::google::protobuf::internal::GetOwnedMessage(message_arena, builder, submessage_arena);
+    }
+    set_has_builder();
+    _impl_.type_.builder_ = builder;
+  }
+  // @@protoc_insertion_point(field_set_allocated:beeremote.JobRequest.builder)
+}
+void JobRequest::clear_builder() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (type_case() == kBuilder) {
+    if (GetArena() == nullptr) {
+      delete _impl_.type_.builder_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.type_.builder_);
+    }
+    clear_has_type();
+  }
+}
 JobRequest::JobRequest(::google::protobuf::Arena* arena)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(arena, _class_data_.base()) {
@@ -1751,6 +1672,9 @@ JobRequest::JobRequest(
         break;
       case kMock:
         _impl_.type_.mock_ = ::google::protobuf::Message::CopyConstruct<::flex::MockJob>(arena, *from._impl_.type_.mock_);
+        break;
+      case kBuilder:
+        _impl_.type_.builder_ = ::google::protobuf::Message::CopyConstruct<::flex::BuilderJob>(arena, *from._impl_.type_.builder_);
         break;
   }
 
@@ -1810,6 +1734,14 @@ void JobRequest::clear_type() {
       }
       break;
     }
+    case kBuilder: {
+      if (GetArena() == nullptr) {
+        delete _impl_.type_.builder_;
+      } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.type_.builder_);
+      }
+      break;
+    }
     case TYPE_NOT_SET: {
       break;
     }
@@ -1854,16 +1786,16 @@ const ::google::protobuf::internal::ClassData* JobRequest::GetClassData() const 
   return _class_data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<3, 9, 2, 45, 2> JobRequest::_table_ = {
+const ::_pbi::TcParseTable<3, 9, 3, 45, 2> JobRequest::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
-    11, 56,  // max_field_number, fast_idx_mask
+    12, 56,  // max_field_number, fast_idx_mask
     offsetof(decltype(_table_), field_lookup_table),
-    4294965632,  // skipmap
+    4294963616,  // skipmap
     offsetof(decltype(_table_), field_entries),
     9,  // num_field_entries
-    2,  // num_aux_entries
+    3,  // num_aux_entries
     offsetof(decltype(_table_), aux_entries),
     _class_data_.base(),
     nullptr,  // post_loop_handler
@@ -1888,9 +1820,7 @@ const ::_pbi::TcParseTable<3, 9, 2, 45, 2> JobRequest::_table_ = {
     // bool force = 5;
     {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(JobRequest, _impl_.force_), 63>(),
      {40, 63, 0, PROTOBUF_FIELD_OFFSET(JobRequest, _impl_.force_)}},
-    // bool job_builder = 6;
-    {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(JobRequest, _impl_.job_builder_), 63>(),
-     {48, 63, 0, PROTOBUF_FIELD_OFFSET(JobRequest, _impl_.job_builder_)}},
+    {::_pbi::TcParser::MiniParse, {}},
     // bool stub_local = 7;
     {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(JobRequest, _impl_.stub_local_), 63>(),
      {56, 63, 0, PROTOBUF_FIELD_OFFSET(JobRequest, _impl_.stub_local_)}},
@@ -1912,9 +1842,6 @@ const ::_pbi::TcParseTable<3, 9, 2, 45, 2> JobRequest::_table_ = {
     // bool force = 5;
     {PROTOBUF_FIELD_OFFSET(JobRequest, _impl_.force_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kBool)},
-    // bool job_builder = 6;
-    {PROTOBUF_FIELD_OFFSET(JobRequest, _impl_.job_builder_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kBool)},
     // bool stub_local = 7;
     {PROTOBUF_FIELD_OFFSET(JobRequest, _impl_.stub_local_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kBool)},
@@ -1924,9 +1851,13 @@ const ::_pbi::TcParseTable<3, 9, 2, 45, 2> JobRequest::_table_ = {
     // .flex.MockJob mock = 11;
     {PROTOBUF_FIELD_OFFSET(JobRequest, _impl_.type_.mock_), _Internal::kOneofCaseOffset + 0, 1,
     (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+    // .flex.BuilderJob builder = 12;
+    {PROTOBUF_FIELD_OFFSET(JobRequest, _impl_.type_.builder_), _Internal::kOneofCaseOffset + 0, 2,
+    (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
   }}, {{
     {::_pbi::TcParser::GetTable<::flex::SyncJob>()},
     {::_pbi::TcParser::GetTable<::flex::MockJob>()},
+    {::_pbi::TcParser::GetTable<::flex::BuilderJob>()},
   }}, {{
     "\24\4\4\0\0\0\0\0\0\0\0\0\0\0\0\0"
     "beeremote.JobRequest"
@@ -2003,13 +1934,6 @@ PROTOBUF_NOINLINE void JobRequest::Clear() {
                 5, this_._internal_force(), target);
           }
 
-          // bool job_builder = 6;
-          if (this_._internal_job_builder() != 0) {
-            target = stream->EnsureSpace(target);
-            target = ::_pbi::WireFormatLite::WriteBoolToArray(
-                6, this_._internal_job_builder(), target);
-          }
-
           // bool stub_local = 7;
           if (this_._internal_stub_local() != 0) {
             target = stream->EnsureSpace(target);
@@ -2027,6 +1951,12 @@ PROTOBUF_NOINLINE void JobRequest::Clear() {
             case kMock: {
               target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
                   11, *this_._impl_.type_.mock_, this_._impl_.type_.mock_->GetCachedSize(), target,
+                  stream);
+              break;
+            }
+            case kBuilder: {
+              target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+                  12, *this_._impl_.type_.builder_, this_._impl_.type_.builder_->GetCachedSize(), target,
                   stream);
               break;
             }
@@ -2082,10 +2012,6 @@ PROTOBUF_NOINLINE void JobRequest::Clear() {
             if (this_._internal_force() != 0) {
               total_size += 2;
             }
-            // bool job_builder = 6;
-            if (this_._internal_job_builder() != 0) {
-              total_size += 2;
-            }
             // bool stub_local = 7;
             if (this_._internal_stub_local() != 0) {
               total_size += 2;
@@ -2102,6 +2028,12 @@ PROTOBUF_NOINLINE void JobRequest::Clear() {
             case kMock: {
               total_size += 1 +
                             ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.type_.mock_);
+              break;
+            }
+            // .flex.BuilderJob builder = 12;
+            case kBuilder: {
+              total_size += 1 +
+                            ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.type_.builder_);
               break;
             }
             case TYPE_NOT_SET: {
@@ -2136,9 +2068,6 @@ void JobRequest::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::goog
   if (from._internal_force() != 0) {
     _this->_impl_.force_ = from._impl_.force_;
   }
-  if (from._internal_job_builder() != 0) {
-    _this->_impl_.job_builder_ = from._impl_.job_builder_;
-  }
   if (from._internal_stub_local() != 0) {
     _this->_impl_.stub_local_ = from._impl_.stub_local_;
   }
@@ -2168,6 +2097,15 @@ void JobRequest::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::goog
               ::google::protobuf::Message::CopyConstruct<::flex::MockJob>(arena, *from._impl_.type_.mock_);
         } else {
           _this->_impl_.type_.mock_->MergeFrom(from._internal_mock());
+        }
+        break;
+      }
+      case kBuilder: {
+        if (oneof_needs_init) {
+          _this->_impl_.type_.builder_ =
+              ::google::protobuf::Message::CopyConstruct<::flex::BuilderJob>(arena, *from._impl_.type_.builder_);
+        } else {
+          _this->_impl_.type_.builder_->MergeFrom(from._internal_builder());
         }
         break;
       }
@@ -6720,603 +6658,6 @@ void GetRSTConfigResponse::InternalSwap(GetRSTConfigResponse* PROTOBUF_RESTRICT 
 }
 
 ::google::protobuf::Metadata GetRSTConfigResponse::GetMetadata() const {
-  return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
-}
-// ===================================================================
-
-class GetGlobalFlagsRequest::_Internal {
- public:
-};
-
-GetGlobalFlagsRequest::GetGlobalFlagsRequest(::google::protobuf::Arena* arena)
-#if defined(PROTOBUF_CUSTOM_VTABLE)
-    : ::google::protobuf::internal::ZeroFieldsBase(arena, _class_data_.base()) {
-#else   // PROTOBUF_CUSTOM_VTABLE
-    : ::google::protobuf::internal::ZeroFieldsBase(arena) {
-#endif  // PROTOBUF_CUSTOM_VTABLE
-  // @@protoc_insertion_point(arena_constructor:beeremote.GetGlobalFlagsRequest)
-}
-GetGlobalFlagsRequest::GetGlobalFlagsRequest(
-    ::google::protobuf::Arena* arena,
-    const GetGlobalFlagsRequest& from)
-#if defined(PROTOBUF_CUSTOM_VTABLE)
-    : ::google::protobuf::internal::ZeroFieldsBase(arena, _class_data_.base()) {
-#else   // PROTOBUF_CUSTOM_VTABLE
-    : ::google::protobuf::internal::ZeroFieldsBase(arena) {
-#endif  // PROTOBUF_CUSTOM_VTABLE
-  GetGlobalFlagsRequest* const _this = this;
-  (void)_this;
-  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
-      from._internal_metadata_);
-
-  // @@protoc_insertion_point(copy_constructor:beeremote.GetGlobalFlagsRequest)
-}
-
-inline void* GetGlobalFlagsRequest::PlacementNew_(const void*, void* mem,
-                                        ::google::protobuf::Arena* arena) {
-  return ::new (mem) GetGlobalFlagsRequest(arena);
-}
-constexpr auto GetGlobalFlagsRequest::InternalNewImpl_() {
-  return ::google::protobuf::internal::MessageCreator::ZeroInit(sizeof(GetGlobalFlagsRequest),
-                                            alignof(GetGlobalFlagsRequest));
-}
-PROTOBUF_CONSTINIT
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::google::protobuf::internal::ClassDataFull GetGlobalFlagsRequest::_class_data_ = {
-    ::google::protobuf::internal::ClassData{
-        &_GetGlobalFlagsRequest_default_instance_._instance,
-        &_table_.header,
-        nullptr,  // OnDemandRegisterArenaDtor
-        nullptr,  // IsInitialized
-        &GetGlobalFlagsRequest::MergeImpl,
-        ::google::protobuf::internal::ZeroFieldsBase::GetNewImpl<GetGlobalFlagsRequest>(),
-#if defined(PROTOBUF_CUSTOM_VTABLE)
-        &GetGlobalFlagsRequest::SharedDtor,
-        ::google::protobuf::internal::ZeroFieldsBase::GetClearImpl<GetGlobalFlagsRequest>(), &GetGlobalFlagsRequest::ByteSizeLong,
-            &GetGlobalFlagsRequest::_InternalSerialize,
-#endif  // PROTOBUF_CUSTOM_VTABLE
-        PROTOBUF_FIELD_OFFSET(GetGlobalFlagsRequest, _impl_._cached_size_),
-        false,
-    },
-    &GetGlobalFlagsRequest::kDescriptorMethods,
-    &descriptor_table_beeremote_2eproto,
-    nullptr,  // tracker
-};
-const ::google::protobuf::internal::ClassData* GetGlobalFlagsRequest::GetClassData() const {
-  ::google::protobuf::internal::PrefetchToLocalCache(&_class_data_);
-  ::google::protobuf::internal::PrefetchToLocalCache(_class_data_.tc_table);
-  return _class_data_.base();
-}
-PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<0, 0, 0, 0, 2> GetGlobalFlagsRequest::_table_ = {
-  {
-    0,  // no _has_bits_
-    0, // no _extensions_
-    0, 0,  // max_field_number, fast_idx_mask
-    offsetof(decltype(_table_), field_lookup_table),
-    4294967295,  // skipmap
-    offsetof(decltype(_table_), field_names),  // no field_entries
-    0,  // num_field_entries
-    0,  // num_aux_entries
-    offsetof(decltype(_table_), field_names),  // no aux_entries
-    _class_data_.base(),
-    nullptr,  // post_loop_handler
-    ::_pbi::TcParser::GenericFallback,  // fallback
-    #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
-    ::_pbi::TcParser::GetTable<::beeremote::GetGlobalFlagsRequest>(),  // to_prefetch
-    #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
-  }, {{
-    {::_pbi::TcParser::MiniParse, {}},
-  }}, {{
-    65535, 65535
-  }},
-  // no field_entries, or aux_entries
-  {{
-  }},
-};
-
-
-
-
-
-
-
-
-::google::protobuf::Metadata GetGlobalFlagsRequest::GetMetadata() const {
-  return ::google::protobuf::internal::ZeroFieldsBase::GetMetadataImpl(GetClassData()->full());
-}
-// ===================================================================
-
-class GetGlobalFlagsResponse::_Internal {
- public:
-};
-
-GetGlobalFlagsResponse::GetGlobalFlagsResponse(::google::protobuf::Arena* arena)
-#if defined(PROTOBUF_CUSTOM_VTABLE)
-    : ::google::protobuf::Message(arena, _class_data_.base()) {
-#else   // PROTOBUF_CUSTOM_VTABLE
-    : ::google::protobuf::Message(arena) {
-#endif  // PROTOBUF_CUSTOM_VTABLE
-  SharedCtor(arena);
-  // @@protoc_insertion_point(arena_constructor:beeremote.GetGlobalFlagsResponse)
-}
-inline PROTOBUF_NDEBUG_INLINE GetGlobalFlagsResponse::Impl_::Impl_(
-    ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
-    const Impl_& from, const ::beeremote::GetGlobalFlagsResponse& from_msg)
-      : remote_address_(arena, from.remote_address_),
-        mgmtd_address_(arena, from.mgmtd_address_),
-        mount_(arena, from.mount_),
-        mgmtd_tls_cert_file_(arena, from.mgmtd_tls_cert_file_),
-        auth_file_(arena, from.auth_file_),
-        _cached_size_{0} {}
-
-GetGlobalFlagsResponse::GetGlobalFlagsResponse(
-    ::google::protobuf::Arena* arena,
-    const GetGlobalFlagsResponse& from)
-#if defined(PROTOBUF_CUSTOM_VTABLE)
-    : ::google::protobuf::Message(arena, _class_data_.base()) {
-#else   // PROTOBUF_CUSTOM_VTABLE
-    : ::google::protobuf::Message(arena) {
-#endif  // PROTOBUF_CUSTOM_VTABLE
-  GetGlobalFlagsResponse* const _this = this;
-  (void)_this;
-  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
-      from._internal_metadata_);
-  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
-  ::memcpy(reinterpret_cast<char *>(&_impl_) +
-               offsetof(Impl_, mgmtd_tls_disable_verification_),
-           reinterpret_cast<const char *>(&from._impl_) +
-               offsetof(Impl_, mgmtd_tls_disable_verification_),
-           offsetof(Impl_, log_level_) -
-               offsetof(Impl_, mgmtd_tls_disable_verification_) +
-               sizeof(Impl_::log_level_));
-
-  // @@protoc_insertion_point(copy_constructor:beeremote.GetGlobalFlagsResponse)
-}
-inline PROTOBUF_NDEBUG_INLINE GetGlobalFlagsResponse::Impl_::Impl_(
-    ::google::protobuf::internal::InternalVisibility visibility,
-    ::google::protobuf::Arena* arena)
-      : remote_address_(arena),
-        mgmtd_address_(arena),
-        mount_(arena),
-        mgmtd_tls_cert_file_(arena),
-        auth_file_(arena),
-        _cached_size_{0} {}
-
-inline void GetGlobalFlagsResponse::SharedCtor(::_pb::Arena* arena) {
-  new (&_impl_) Impl_(internal_visibility(), arena);
-  ::memset(reinterpret_cast<char *>(&_impl_) +
-               offsetof(Impl_, mgmtd_tls_disable_verification_),
-           0,
-           offsetof(Impl_, log_level_) -
-               offsetof(Impl_, mgmtd_tls_disable_verification_) +
-               sizeof(Impl_::log_level_));
-}
-GetGlobalFlagsResponse::~GetGlobalFlagsResponse() {
-  // @@protoc_insertion_point(destructor:beeremote.GetGlobalFlagsResponse)
-  SharedDtor(*this);
-}
-inline void GetGlobalFlagsResponse::SharedDtor(MessageLite& self) {
-  GetGlobalFlagsResponse& this_ = static_cast<GetGlobalFlagsResponse&>(self);
-  this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
-  ABSL_DCHECK(this_.GetArena() == nullptr);
-  this_._impl_.remote_address_.Destroy();
-  this_._impl_.mgmtd_address_.Destroy();
-  this_._impl_.mount_.Destroy();
-  this_._impl_.mgmtd_tls_cert_file_.Destroy();
-  this_._impl_.auth_file_.Destroy();
-  this_._impl_.~Impl_();
-}
-
-inline void* GetGlobalFlagsResponse::PlacementNew_(const void*, void* mem,
-                                        ::google::protobuf::Arena* arena) {
-  return ::new (mem) GetGlobalFlagsResponse(arena);
-}
-constexpr auto GetGlobalFlagsResponse::InternalNewImpl_() {
-  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(GetGlobalFlagsResponse),
-                                            alignof(GetGlobalFlagsResponse));
-}
-PROTOBUF_CONSTINIT
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::google::protobuf::internal::ClassDataFull GetGlobalFlagsResponse::_class_data_ = {
-    ::google::protobuf::internal::ClassData{
-        &_GetGlobalFlagsResponse_default_instance_._instance,
-        &_table_.header,
-        nullptr,  // OnDemandRegisterArenaDtor
-        nullptr,  // IsInitialized
-        &GetGlobalFlagsResponse::MergeImpl,
-        ::google::protobuf::Message::GetNewImpl<GetGlobalFlagsResponse>(),
-#if defined(PROTOBUF_CUSTOM_VTABLE)
-        &GetGlobalFlagsResponse::SharedDtor,
-        ::google::protobuf::Message::GetClearImpl<GetGlobalFlagsResponse>(), &GetGlobalFlagsResponse::ByteSizeLong,
-            &GetGlobalFlagsResponse::_InternalSerialize,
-#endif  // PROTOBUF_CUSTOM_VTABLE
-        PROTOBUF_FIELD_OFFSET(GetGlobalFlagsResponse, _impl_._cached_size_),
-        false,
-    },
-    &GetGlobalFlagsResponse::kDescriptorMethods,
-    &descriptor_table_beeremote_2eproto,
-    nullptr,  // tracker
-};
-const ::google::protobuf::internal::ClassData* GetGlobalFlagsResponse::GetClassData() const {
-  ::google::protobuf::internal::PrefetchToLocalCache(&_class_data_);
-  ::google::protobuf::internal::PrefetchToLocalCache(_class_data_.tc_table);
-  return _class_data_.base();
-}
-PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<4, 11, 0, 109, 2> GetGlobalFlagsResponse::_table_ = {
-  {
-    0,  // no _has_bits_
-    0, // no _extensions_
-    11, 120,  // max_field_number, fast_idx_mask
-    offsetof(decltype(_table_), field_lookup_table),
-    4294965248,  // skipmap
-    offsetof(decltype(_table_), field_entries),
-    11,  // num_field_entries
-    0,  // num_aux_entries
-    offsetof(decltype(_table_), field_names),  // no aux_entries
-    _class_data_.base(),
-    nullptr,  // post_loop_handler
-    ::_pbi::TcParser::GenericFallback,  // fallback
-    #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
-    ::_pbi::TcParser::GetTable<::beeremote::GetGlobalFlagsResponse>(),  // to_prefetch
-    #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
-  }, {{
-    {::_pbi::TcParser::MiniParse, {}},
-    // string remote_address = 1;
-    {::_pbi::TcParser::FastUS1,
-     {10, 63, 0, PROTOBUF_FIELD_OFFSET(GetGlobalFlagsResponse, _impl_.remote_address_)}},
-    // string mgmtd_address = 2;
-    {::_pbi::TcParser::FastUS1,
-     {18, 63, 0, PROTOBUF_FIELD_OFFSET(GetGlobalFlagsResponse, _impl_.mgmtd_address_)}},
-    // string mount = 3;
-    {::_pbi::TcParser::FastUS1,
-     {26, 63, 0, PROTOBUF_FIELD_OFFSET(GetGlobalFlagsResponse, _impl_.mount_)}},
-    // string mgmtd_tls_cert_file = 4;
-    {::_pbi::TcParser::FastUS1,
-     {34, 63, 0, PROTOBUF_FIELD_OFFSET(GetGlobalFlagsResponse, _impl_.mgmtd_tls_cert_file_)}},
-    // bool mgmtd_tls_disable_verification = 5;
-    {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(GetGlobalFlagsResponse, _impl_.mgmtd_tls_disable_verification_), 63>(),
-     {40, 63, 0, PROTOBUF_FIELD_OFFSET(GetGlobalFlagsResponse, _impl_.mgmtd_tls_disable_verification_)}},
-    // bool mgmtd_tls_disable = 6;
-    {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(GetGlobalFlagsResponse, _impl_.mgmtd_tls_disable_), 63>(),
-     {48, 63, 0, PROTOBUF_FIELD_OFFSET(GetGlobalFlagsResponse, _impl_.mgmtd_tls_disable_)}},
-    // string auth_file = 7;
-    {::_pbi::TcParser::FastUS1,
-     {58, 63, 0, PROTOBUF_FIELD_OFFSET(GetGlobalFlagsResponse, _impl_.auth_file_)}},
-    // bool auth_disable = 8;
-    {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(GetGlobalFlagsResponse, _impl_.auth_disable_), 63>(),
-     {64, 63, 0, PROTOBUF_FIELD_OFFSET(GetGlobalFlagsResponse, _impl_.auth_disable_)}},
-    // int32 num_workers = 9;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(GetGlobalFlagsResponse, _impl_.num_workers_), 63>(),
-     {72, 63, 0, PROTOBUF_FIELD_OFFSET(GetGlobalFlagsResponse, _impl_.num_workers_)}},
-    // int32 conn_timeout_ms = 10;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(GetGlobalFlagsResponse, _impl_.conn_timeout_ms_), 63>(),
-     {80, 63, 0, PROTOBUF_FIELD_OFFSET(GetGlobalFlagsResponse, _impl_.conn_timeout_ms_)}},
-    // int32 log_level = 11;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(GetGlobalFlagsResponse, _impl_.log_level_), 63>(),
-     {88, 63, 0, PROTOBUF_FIELD_OFFSET(GetGlobalFlagsResponse, _impl_.log_level_)}},
-    {::_pbi::TcParser::MiniParse, {}},
-    {::_pbi::TcParser::MiniParse, {}},
-    {::_pbi::TcParser::MiniParse, {}},
-    {::_pbi::TcParser::MiniParse, {}},
-  }}, {{
-    65535, 65535
-  }}, {{
-    // string remote_address = 1;
-    {PROTOBUF_FIELD_OFFSET(GetGlobalFlagsResponse, _impl_.remote_address_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // string mgmtd_address = 2;
-    {PROTOBUF_FIELD_OFFSET(GetGlobalFlagsResponse, _impl_.mgmtd_address_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // string mount = 3;
-    {PROTOBUF_FIELD_OFFSET(GetGlobalFlagsResponse, _impl_.mount_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // string mgmtd_tls_cert_file = 4;
-    {PROTOBUF_FIELD_OFFSET(GetGlobalFlagsResponse, _impl_.mgmtd_tls_cert_file_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // bool mgmtd_tls_disable_verification = 5;
-    {PROTOBUF_FIELD_OFFSET(GetGlobalFlagsResponse, _impl_.mgmtd_tls_disable_verification_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kBool)},
-    // bool mgmtd_tls_disable = 6;
-    {PROTOBUF_FIELD_OFFSET(GetGlobalFlagsResponse, _impl_.mgmtd_tls_disable_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kBool)},
-    // string auth_file = 7;
-    {PROTOBUF_FIELD_OFFSET(GetGlobalFlagsResponse, _impl_.auth_file_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // bool auth_disable = 8;
-    {PROTOBUF_FIELD_OFFSET(GetGlobalFlagsResponse, _impl_.auth_disable_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kBool)},
-    // int32 num_workers = 9;
-    {PROTOBUF_FIELD_OFFSET(GetGlobalFlagsResponse, _impl_.num_workers_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
-    // int32 conn_timeout_ms = 10;
-    {PROTOBUF_FIELD_OFFSET(GetGlobalFlagsResponse, _impl_.conn_timeout_ms_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
-    // int32 log_level = 11;
-    {PROTOBUF_FIELD_OFFSET(GetGlobalFlagsResponse, _impl_.log_level_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
-  }},
-  // no aux_entries
-  {{
-    "\40\16\15\5\23\0\0\11\0\0\0\0\0\0\0\0"
-    "beeremote.GetGlobalFlagsResponse"
-    "remote_address"
-    "mgmtd_address"
-    "mount"
-    "mgmtd_tls_cert_file"
-    "auth_file"
-  }},
-};
-
-PROTOBUF_NOINLINE void GetGlobalFlagsResponse::Clear() {
-// @@protoc_insertion_point(message_clear_start:beeremote.GetGlobalFlagsResponse)
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  ::uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  _impl_.remote_address_.ClearToEmpty();
-  _impl_.mgmtd_address_.ClearToEmpty();
-  _impl_.mount_.ClearToEmpty();
-  _impl_.mgmtd_tls_cert_file_.ClearToEmpty();
-  _impl_.auth_file_.ClearToEmpty();
-  ::memset(&_impl_.mgmtd_tls_disable_verification_, 0, static_cast<::size_t>(
-      reinterpret_cast<char*>(&_impl_.log_level_) -
-      reinterpret_cast<char*>(&_impl_.mgmtd_tls_disable_verification_)) + sizeof(_impl_.log_level_));
-  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
-}
-
-#if defined(PROTOBUF_CUSTOM_VTABLE)
-        ::uint8_t* GetGlobalFlagsResponse::_InternalSerialize(
-            const MessageLite& base, ::uint8_t* target,
-            ::google::protobuf::io::EpsCopyOutputStream* stream) {
-          const GetGlobalFlagsResponse& this_ = static_cast<const GetGlobalFlagsResponse&>(base);
-#else   // PROTOBUF_CUSTOM_VTABLE
-        ::uint8_t* GetGlobalFlagsResponse::_InternalSerialize(
-            ::uint8_t* target,
-            ::google::protobuf::io::EpsCopyOutputStream* stream) const {
-          const GetGlobalFlagsResponse& this_ = *this;
-#endif  // PROTOBUF_CUSTOM_VTABLE
-          // @@protoc_insertion_point(serialize_to_array_start:beeremote.GetGlobalFlagsResponse)
-          ::uint32_t cached_has_bits = 0;
-          (void)cached_has_bits;
-
-          // string remote_address = 1;
-          if (!this_._internal_remote_address().empty()) {
-            const std::string& _s = this_._internal_remote_address();
-            ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "beeremote.GetGlobalFlagsResponse.remote_address");
-            target = stream->WriteStringMaybeAliased(1, _s, target);
-          }
-
-          // string mgmtd_address = 2;
-          if (!this_._internal_mgmtd_address().empty()) {
-            const std::string& _s = this_._internal_mgmtd_address();
-            ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "beeremote.GetGlobalFlagsResponse.mgmtd_address");
-            target = stream->WriteStringMaybeAliased(2, _s, target);
-          }
-
-          // string mount = 3;
-          if (!this_._internal_mount().empty()) {
-            const std::string& _s = this_._internal_mount();
-            ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "beeremote.GetGlobalFlagsResponse.mount");
-            target = stream->WriteStringMaybeAliased(3, _s, target);
-          }
-
-          // string mgmtd_tls_cert_file = 4;
-          if (!this_._internal_mgmtd_tls_cert_file().empty()) {
-            const std::string& _s = this_._internal_mgmtd_tls_cert_file();
-            ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "beeremote.GetGlobalFlagsResponse.mgmtd_tls_cert_file");
-            target = stream->WriteStringMaybeAliased(4, _s, target);
-          }
-
-          // bool mgmtd_tls_disable_verification = 5;
-          if (this_._internal_mgmtd_tls_disable_verification() != 0) {
-            target = stream->EnsureSpace(target);
-            target = ::_pbi::WireFormatLite::WriteBoolToArray(
-                5, this_._internal_mgmtd_tls_disable_verification(), target);
-          }
-
-          // bool mgmtd_tls_disable = 6;
-          if (this_._internal_mgmtd_tls_disable() != 0) {
-            target = stream->EnsureSpace(target);
-            target = ::_pbi::WireFormatLite::WriteBoolToArray(
-                6, this_._internal_mgmtd_tls_disable(), target);
-          }
-
-          // string auth_file = 7;
-          if (!this_._internal_auth_file().empty()) {
-            const std::string& _s = this_._internal_auth_file();
-            ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "beeremote.GetGlobalFlagsResponse.auth_file");
-            target = stream->WriteStringMaybeAliased(7, _s, target);
-          }
-
-          // bool auth_disable = 8;
-          if (this_._internal_auth_disable() != 0) {
-            target = stream->EnsureSpace(target);
-            target = ::_pbi::WireFormatLite::WriteBoolToArray(
-                8, this_._internal_auth_disable(), target);
-          }
-
-          // int32 num_workers = 9;
-          if (this_._internal_num_workers() != 0) {
-            target = ::google::protobuf::internal::WireFormatLite::
-                WriteInt32ToArrayWithField<9>(
-                    stream, this_._internal_num_workers(), target);
-          }
-
-          // int32 conn_timeout_ms = 10;
-          if (this_._internal_conn_timeout_ms() != 0) {
-            target = ::google::protobuf::internal::WireFormatLite::
-                WriteInt32ToArrayWithField<10>(
-                    stream, this_._internal_conn_timeout_ms(), target);
-          }
-
-          // int32 log_level = 11;
-          if (this_._internal_log_level() != 0) {
-            target = ::google::protobuf::internal::WireFormatLite::
-                WriteInt32ToArrayWithField<11>(
-                    stream, this_._internal_log_level(), target);
-          }
-
-          if (PROTOBUF_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
-            target =
-                ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-                    this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
-          }
-          // @@protoc_insertion_point(serialize_to_array_end:beeremote.GetGlobalFlagsResponse)
-          return target;
-        }
-
-#if defined(PROTOBUF_CUSTOM_VTABLE)
-        ::size_t GetGlobalFlagsResponse::ByteSizeLong(const MessageLite& base) {
-          const GetGlobalFlagsResponse& this_ = static_cast<const GetGlobalFlagsResponse&>(base);
-#else   // PROTOBUF_CUSTOM_VTABLE
-        ::size_t GetGlobalFlagsResponse::ByteSizeLong() const {
-          const GetGlobalFlagsResponse& this_ = *this;
-#endif  // PROTOBUF_CUSTOM_VTABLE
-          // @@protoc_insertion_point(message_byte_size_start:beeremote.GetGlobalFlagsResponse)
-          ::size_t total_size = 0;
-
-          ::uint32_t cached_has_bits = 0;
-          // Prevent compiler warnings about cached_has_bits being unused
-          (void)cached_has_bits;
-
-          ::_pbi::Prefetch5LinesFrom7Lines(&this_);
-           {
-            // string remote_address = 1;
-            if (!this_._internal_remote_address().empty()) {
-              total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                              this_._internal_remote_address());
-            }
-            // string mgmtd_address = 2;
-            if (!this_._internal_mgmtd_address().empty()) {
-              total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                              this_._internal_mgmtd_address());
-            }
-            // string mount = 3;
-            if (!this_._internal_mount().empty()) {
-              total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                              this_._internal_mount());
-            }
-            // string mgmtd_tls_cert_file = 4;
-            if (!this_._internal_mgmtd_tls_cert_file().empty()) {
-              total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                              this_._internal_mgmtd_tls_cert_file());
-            }
-            // string auth_file = 7;
-            if (!this_._internal_auth_file().empty()) {
-              total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                              this_._internal_auth_file());
-            }
-            // bool mgmtd_tls_disable_verification = 5;
-            if (this_._internal_mgmtd_tls_disable_verification() != 0) {
-              total_size += 2;
-            }
-            // bool mgmtd_tls_disable = 6;
-            if (this_._internal_mgmtd_tls_disable() != 0) {
-              total_size += 2;
-            }
-            // bool auth_disable = 8;
-            if (this_._internal_auth_disable() != 0) {
-              total_size += 2;
-            }
-            // int32 num_workers = 9;
-            if (this_._internal_num_workers() != 0) {
-              total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
-                  this_._internal_num_workers());
-            }
-            // int32 conn_timeout_ms = 10;
-            if (this_._internal_conn_timeout_ms() != 0) {
-              total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
-                  this_._internal_conn_timeout_ms());
-            }
-            // int32 log_level = 11;
-            if (this_._internal_log_level() != 0) {
-              total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
-                  this_._internal_log_level());
-            }
-          }
-          return this_.MaybeComputeUnknownFieldsSize(total_size,
-                                                     &this_._impl_._cached_size_);
-        }
-
-void GetGlobalFlagsResponse::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
-  auto* const _this = static_cast<GetGlobalFlagsResponse*>(&to_msg);
-  auto& from = static_cast<const GetGlobalFlagsResponse&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:beeremote.GetGlobalFlagsResponse)
-  ABSL_DCHECK_NE(&from, _this);
-  ::uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (!from._internal_remote_address().empty()) {
-    _this->_internal_set_remote_address(from._internal_remote_address());
-  }
-  if (!from._internal_mgmtd_address().empty()) {
-    _this->_internal_set_mgmtd_address(from._internal_mgmtd_address());
-  }
-  if (!from._internal_mount().empty()) {
-    _this->_internal_set_mount(from._internal_mount());
-  }
-  if (!from._internal_mgmtd_tls_cert_file().empty()) {
-    _this->_internal_set_mgmtd_tls_cert_file(from._internal_mgmtd_tls_cert_file());
-  }
-  if (!from._internal_auth_file().empty()) {
-    _this->_internal_set_auth_file(from._internal_auth_file());
-  }
-  if (from._internal_mgmtd_tls_disable_verification() != 0) {
-    _this->_impl_.mgmtd_tls_disable_verification_ = from._impl_.mgmtd_tls_disable_verification_;
-  }
-  if (from._internal_mgmtd_tls_disable() != 0) {
-    _this->_impl_.mgmtd_tls_disable_ = from._impl_.mgmtd_tls_disable_;
-  }
-  if (from._internal_auth_disable() != 0) {
-    _this->_impl_.auth_disable_ = from._impl_.auth_disable_;
-  }
-  if (from._internal_num_workers() != 0) {
-    _this->_impl_.num_workers_ = from._impl_.num_workers_;
-  }
-  if (from._internal_conn_timeout_ms() != 0) {
-    _this->_impl_.conn_timeout_ms_ = from._impl_.conn_timeout_ms_;
-  }
-  if (from._internal_log_level() != 0) {
-    _this->_impl_.log_level_ = from._impl_.log_level_;
-  }
-  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
-}
-
-void GetGlobalFlagsResponse::CopyFrom(const GetGlobalFlagsResponse& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:beeremote.GetGlobalFlagsResponse)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-
-void GetGlobalFlagsResponse::InternalSwap(GetGlobalFlagsResponse* PROTOBUF_RESTRICT other) {
-  using std::swap;
-  auto* arena = GetArena();
-  ABSL_DCHECK_EQ(arena, other->GetArena());
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.remote_address_, &other->_impl_.remote_address_, arena);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.mgmtd_address_, &other->_impl_.mgmtd_address_, arena);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.mount_, &other->_impl_.mount_, arena);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.mgmtd_tls_cert_file_, &other->_impl_.mgmtd_tls_cert_file_, arena);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.auth_file_, &other->_impl_.auth_file_, arena);
-  ::google::protobuf::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(GetGlobalFlagsResponse, _impl_.log_level_)
-      + sizeof(GetGlobalFlagsResponse::_impl_.log_level_)
-      - PROTOBUF_FIELD_OFFSET(GetGlobalFlagsResponse, _impl_.mgmtd_tls_disable_verification_)>(
-          reinterpret_cast<char*>(&_impl_.mgmtd_tls_disable_verification_),
-          reinterpret_cast<char*>(&other->_impl_.mgmtd_tls_disable_verification_));
-}
-
-::google::protobuf::Metadata GetGlobalFlagsResponse::GetMetadata() const {
   return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
 }
 // @@protoc_insertion_point(namespace_scope)
